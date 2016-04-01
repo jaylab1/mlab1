@@ -64,7 +64,7 @@ document.addEventListener("deviceready", function() {
                 'bearing': 140
             });
 
-            map.addMarker({
+            /*map.addMarker({
                 'marker': marker,
                 'position': marker.position,
                 'animation': plugin.google.maps.Animation.DROP,
@@ -81,7 +81,7 @@ document.addEventListener("deviceready", function() {
                 marker.showInfoWindow();
             });
             //map.setCenter(location);
-            marker.setMap(map);
+            marker.setMap(map);*/
             map.refreshLayout();
         });
 
