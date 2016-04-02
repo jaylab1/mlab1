@@ -58,14 +58,18 @@ document.addEventListener("deviceready", function() {
     function setPosition(lat, lng) {
         return new plugin.google.maps.LatLng(lat, lng);
     }
+    
+function mzoom(){
+    
+    alert('testing');   
+    
+}    
+    
+    
 });
 
 function onLocationError( error_msg ) {
     alert("Plase enable GPS location service.\n" + JSON.stringify(error_msg, null, 4));
 }
 
-function mzoom(){
-    
-    alert('testing');   
-    
-}
+
