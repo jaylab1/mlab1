@@ -62,10 +62,10 @@ document.addEventListener("deviceready", function() {
         map.addEventListener(plugin.google.maps.event.MAP_READY, function(position) {
             // Defining markers for demo
             map.animateCamera({
-                'target': setPosition(position.coords.latitude, position.coords.longitude),
+                'target': location,
                 'zoom': 14,
                 'bearing': 140
-            });
+             });
 
             /* map.addMarker({
                 'marker': marker,
@@ -89,7 +89,7 @@ document.addEventListener("deviceready", function() {
         });
     }, onLocationError, option);
 
-    /*map.on(plugin.google.maps.event.CAMERA_CHANGE, function(position) {
+    map.on(plugin.google.maps.event.CAMERA_CHANGE, function(position) {
     	
 		 map.animateCamera({
                 'zoom': 17,
@@ -97,7 +97,7 @@ document.addEventListener("deviceready", function() {
             });
 
 
-    })*/
+    })
 
 
     map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
@@ -116,3 +116,9 @@ document.addEventListener("deviceready", function() {
 function onLocationError(error_msg) {
     alert("Plase enable GPS location service.\n" + JSON.stringify(error_msg, null, 4));
 }
+
+
+$("#map_canvas").on('touchstart click', function(e){
+  e.preventDefault();
+  alert("test");
+});
