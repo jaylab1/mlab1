@@ -54,3 +54,18 @@ body.with-panel-right-reveal .panel-overlay {
     display: none;
   }
 }
+}
+
+
+.PIN{
+ 
+   top:0;
+   bottom:0;
+   right:0;
+   left:0;
+   width:167px;
+   height:218px;
+   background-image:url(../img/PIN.png);
+  
+}
+
