@@ -43,6 +43,7 @@ document.addEventListener("deviceready", function() {
             
             
             map.animateCamera({
+            	'target': setPosition(),
                 'zoom': 14,
                 'bearing': 140
    	    });
@@ -53,8 +54,8 @@ document.addEventListener("deviceready", function() {
     });
 
     // Function that return a LatLng Object to Map
-    function setPosition(lat, lng) {
-        return new plugin.google.maps.LatLng(lat, lng);
+    function setPosition() {
+        return new plugin.google.maps.LatLng(position.coords.latitude,position.coords.longitude);
     }
 	
 	
