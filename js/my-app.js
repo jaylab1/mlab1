@@ -98,10 +98,9 @@ document.addEventListener("deviceready", function() {
     });*/
 
 
-    map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function(position) {
+    map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
     
     	map.animateCamera({
-    		'latLng': setPosition(position.coords.latitude, position.coords.longitude),
   		'zoom': 16,
   		'bearing': 140,
   		'duration': 500 // 10 seconds
