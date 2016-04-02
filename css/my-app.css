@@ -59,12 +59,12 @@ body.with-panel-right-reveal .panel-overlay {
 
 .PIN{
    position:absolute;
-   width:167px;
-   height:218px;
+   width:141px;
+   height:183px;
    background-image: url("../img/PIN.png");
    top: 50%;
    left: 50%;
-   margin-top: -149px; /* Half the height */
+   margin-top: -139px; /* Half the height */
    margin-left: -83.5px; /* Half the width */
    opacity:0.5;
    
