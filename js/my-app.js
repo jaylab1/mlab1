@@ -102,8 +102,6 @@ document.addEventListener("deviceready", function() {
 
     map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
     
-    	map.setZoom(17);
-     	
        //$(".PIN").animate({opacity:"0.1"});
     });
 
