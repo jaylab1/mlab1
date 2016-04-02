@@ -24,11 +24,13 @@ document.addEventListener("deviceready", function() {
         timeout: 5000,
         maximumAge: 3000
     };
-    navigator.geolocation.getCurrentPosition(function (position) {
-        var location = setPosition(position.coords.latitude, position.coords.longitude);
-        // Invoking Map using Google Map SDK v2 by dubcanada
-        var map = plugin.google.maps.Map.getMap(div, {
-            'controls': {
+    
+    
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var location = setPosition(position.coords.latitude, position.coords.longitude);
+            // Invoking Map using Google Map SDK v2 by dubcanada
+            var map = plugin.google.maps.Map.getMap(div, {
+                'controls': {
                 'compass': false,
                 'zoom': false,
                 'myLocationButton': true,
@@ -46,31 +48,29 @@ document.addEventListener("deviceready", function() {
                 'bearing': 50
             },
             'center': setPosition(position.coords.latitude, position.coords.longitude)
-        });
+            });
+            
         map.setPadding(0, 0, 0);
 
-      
-    var evtName = plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK;
-    map.on(evtName, function(latLng) {
-        alert("Map was long clicked.\n" +
-            latLng.toUrlValue());
-    });      
-      
-      
         
     }, onLocationError, option);
     
+
+    
+
     // Function that return a LatLng Object to Map
     function setPosition(lat, lng) {
         return new plugin.google.maps.LatLng(lat, lng);
-    }
-    
-
-    
+    }    
     
 });
 
+  // The MAP_CLOSE event will be fired when the map dialog is closed.
+  map.addEventListener(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
 
+    alert("The map dialog is closed");
+
+  });
 
 
 function onLocationError( error_msg ) {
