@@ -42,7 +42,7 @@ document.addEventListener("deviceready", function() {
     navigator.geolocation.getCurrentPosition(function(position) {
         var location = setPosition(position.coords.latitude, position.coords.longitude);
         // Invoking Map using Google Map SDK v2 by dubcanada
-        map.setOptions({
+        /*map.setOptions({
             'camera': {
                 'latLng': location,
                 'zoom': 14,
@@ -56,7 +56,7 @@ document.addEventListener("deviceready", function() {
             'position': setPosition(position.coords.latitude, position.coords.longitude),
             'title': "3:00min",
             'icon': 'www/img/icon.png'
-        };
+        };*/
 
         // Capturing event when Map load are ready.
         map.addEventListener(plugin.google.maps.event.MAP_READY, function(position) {
