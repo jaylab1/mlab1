@@ -91,6 +91,14 @@ document.addEventListener("deviceready", function() {
         	marker.setPosition(setPosition(position.target.lat, position.target.lng));
         	map.refreshLayout();
         });
+        
+        map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function (position) {
+        	//alert(JSON.stringify(position));
+        	map.setCenter(setPosition(position.target.lat, position.target.lng));
+        	marker.setPosition(setPosition(position.target.lat, position.target.lng));
+        	map.refreshLayout();
+        });        
+        
     }, onLocationError, option);
 
     // Function that return a LatLng Object to Map
