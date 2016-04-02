@@ -59,7 +59,7 @@ document.addEventListener("deviceready", function() {
         };
 
         // Capturing event when Map load are ready.
-        map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
+        map.addEventListener(plugin.google.maps.event.MAP_READY, function(position) {
             // Defining markers for demo
             map.animateCamera({
                 'target': setPosition(position.coords.latitude, position.coords.longitude),
@@ -89,13 +89,15 @@ document.addEventListener("deviceready", function() {
         });
     }, onLocationError, option);
 
-    /*map.on(plugin.google.maps.event.CAMERA_CHANGE, function(position) {
-        var map = this;
-        map.refreshLayout();
-        alert(JSON.stringify(position));
-        map.setCenter(setPosition(position.target.lat, position.target.lng));
-        // marker.setPosition(setPosition(position.target.lat, position.target.lng));
-    });*/
+    map.on(plugin.google.maps.event.CAMERA_CHANGE, function(position) {
+    	
+		 map.animateCamera({
+                'zoom': 17,
+                'bearing': 140
+            });
+
+
+    })
 
 
     map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
