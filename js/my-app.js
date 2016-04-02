@@ -75,14 +75,10 @@ function onLocationError( error_msg ) {
     alert("Plase enable GPS location service.\n" + JSON.stringify(error_msg, null, 4));
 }
 
-  // The MAP_CLOSE event will be fired when the map dialog is closed.
-  map.addEventListener(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
-
-    alert("The map dialog is closed");
-
-  });
-
-
-alert("test");   
+var evtName = plugin.google.maps.event.MAP_LONG_CLICK;
+map.on(evtName, function(latLng) {
+  alert("Map was long clicked.\n" +
+        latLng.toUrlValue());
+});
 
 
