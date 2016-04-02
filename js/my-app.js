@@ -100,11 +100,7 @@ document.addEventListener("deviceready", function() {
 
     map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
     
-    	map.animateCamera({
-  		'zoom': 16,
-  		'bearing': 140,
-  		'duration': 500 // 10 seconds
-     	});
+    	map.setZoom(17);
      	
        //$(".PIN").animate({opacity:"0.1"});
     });
