@@ -66,7 +66,6 @@ body.with-panel-right-reveal .panel-overlay {
    width:167px;
    height:218px;
    margin: 0 auto;
-   background-image:url(../img/PIN.png);
-  
+   background-image: url("../img/PIN.png");
 }
 
