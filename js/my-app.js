@@ -16,7 +16,7 @@ var mainView = myApp.addView('.view-main', {
 });
 
 // Add Google Native Map
-document.addEventListener("deviceready", function() {
+/*document.addEventListener("deviceready", function() {
   // Getting the map selector in DOM
     var div = document.getElementById("map_canvas");
     var option = {
@@ -79,6 +79,19 @@ var evtName = plugin.google.maps.event.MAP_LONG_CLICK;
 map.on(evtName, function(latLng) {
   alert("Map was long clicked.\n" +
         latLng.toUrlValue());
-});
+});*/
+
+
+
+document.addEventListener("deviceready", function()  {
+  var div = document.getElementById("map_canvas");
+  var map = plugin.google.maps.Map.getMap(div);
+
+  map.on(plugin.google.maps.event.CAMERA_CHANGE, onMapCameraChanged);
+}
+function onMapCameraChanged(position) {
+  var map = this;
+  console.log(JSON.stringify(position));
+}
 
 
