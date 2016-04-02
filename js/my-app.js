@@ -49,62 +49,6 @@ document.addEventListener("deviceready", function() {
         });
         map.setPadding(0, 0, 0);
 
-        var marker = {
-            'position': setPosition(position.coords.latitude, position.coords.longitude),
-            'title': "3:00min",
-            'icon': 'www/img/icon.png'
-        };
-
-        // Capturing event when Map load are ready.
-        map.addEventListener(plugin.google.maps.event.MAP_READY, function(){
-            // Defining markers for demo
-            map.animateCamera({
-                'target': setPosition(position.coords.latitude, position.coords.longitude),
-                'zoom': 14,
-                'bearing': 140
-            });
-
-            /*map.addMarker({
-                'marker': marker,
-                'position': marker.position,
-                'animation': plugin.google.maps.Animation.DROP,
-                'rotate': 45,
-                'draggable': true,
-                'title': marker.title,
-                'icon': {
-                    url: marker.icon
-                },
-                'styles' : {
-    				'position': 'fixed'
-  				}
-            }, function(marker) {
-                marker.showInfoWindow();
-            });*/
-            map.setCenter(location);
-            //marker.setMap(map);*/
-            map.refreshLayout();
-        });
-
-        map.on(plugin.google.maps.event.CAMERA_CHANGE, function (position) {
-        	//alert(JSON.stringify(position));
-        	map.setCenter(setPosition(position.target.lat, position.target.lng));
-        	//marker.setPosition(setPosition(position.target.lat, position.target.lng));
-        	map.refreshLayout();
-        });
-        
-        map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function (position) {
-        	//alert(JSON.stringify(position));
-        	
-            map.animateCamera({
-                'target': setPosition(position.coords.latitude, position.coords.longitude),
-                'zoom': 17,
-                'bearing': 140
-            });
-            
-        	//map.setCenter(location);
-        	//marker.setPosition(setPosition(position.target.lat, position.target.lng));
-        	map.refreshLayout();
-        });        
         
     }, onLocationError, option);
 
