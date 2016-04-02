@@ -94,7 +94,14 @@ document.addEventListener("deviceready", function() {
         
         map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function (position) {
         	//alert(JSON.stringify(position));
-        	map.setCenter(location);
+        	
+            map.animateCamera({
+                'target': setPosition(position.coords.latitude, position.coords.longitude),
+                'zoom': 17,
+                'bearing': 140
+            });
+            
+        	//map.setCenter(location);
         	//marker.setPosition(setPosition(position.target.lat, position.target.lng));
         	map.refreshLayout();
         });        
