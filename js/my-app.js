@@ -52,18 +52,23 @@ document.addEventListener("deviceready", function() {
         
     }, onLocationError, option);
     
-    map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK,mzoom);
+    
+    var evtName = plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK;
+    map.on(evtName, function(latLng) {
+        alert("Map was long clicked.\n" +
+            latLng.toUrlValue());
+        });
 
     // Function that return a LatLng Object to Map
     function setPosition(lat, lng) {
         return new plugin.google.maps.LatLng(lat, lng);
     }
     
-function mzoom(){
+    function mzoom(){
     
-    alert('testing');   
+        alert('testing');   
     
-}    
+    }    
     
     
 });
