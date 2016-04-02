@@ -52,26 +52,22 @@ document.addEventListener("deviceready", function() {
         
     }, onLocationError, option);
     
-    
-    var evtName = plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK;
-    map.on(evtName, function(latLng) {
-        alert("Map was long clicked.\n" +
-            latLng.toUrlValue());
-        });
-
     // Function that return a LatLng Object to Map
     function setPosition(lat, lng) {
         return new plugin.google.maps.LatLng(lat, lng);
     }
     
-    function mzoom(){
-    
-        alert('testing');   
-    
-    }    
+
     
     
 });
+
+
+    var evtName = plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK;
+    map.on(evtName, function(latLng) {
+        alert("Map was long clicked.\n" +
+            latLng.toUrlValue());
+    });
 
 function onLocationError( error_msg ) {
     alert("Plase enable GPS location service.\n" + JSON.stringify(error_msg, null, 4));
