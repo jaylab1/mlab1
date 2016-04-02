@@ -54,23 +54,25 @@ document.addEventListener("deviceready", function() {
 
         
     }, onLocationError, option);
-    
 
-    
 
     // Function that return a LatLng Object to Map
     function setPosition(lat, lng) {
         return new plugin.google.maps.LatLng(lat, lng);
     }    
     
-});
-
+    
   // The MAP_CLOSE event will be fired when the map dialog is closed.
   map.addEventListener(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
 
     alert("The map dialog is closed");
 
   });
+    
+    
+}
+
+
 
 
 function onLocationError( error_msg ) {
