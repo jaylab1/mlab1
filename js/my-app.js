@@ -52,15 +52,7 @@ document.addEventListener("deviceready", function() {
         
     }, onLocationError, option);
     
-   /* map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, 
-    
-        map.animateCamera({
-            'tilt': 60,
-            'zoom': 18,
-            'bearing': 140
-        });
-    
-    );*/
+    map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK,mzoom);
 
     // Function that return a LatLng Object to Map
     function setPosition(lat, lng) {
@@ -70,4 +62,11 @@ document.addEventListener("deviceready", function() {
 
 function onLocationError( error_msg ) {
     alert("Plase enable GPS location service.\n" + JSON.stringify(error_msg, null, 4));
+}
+
+function mzoom(){
+    
+    alert('testing');   
+    
+}
 }
