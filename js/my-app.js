@@ -51,6 +51,16 @@ document.addEventListener("deviceready", function() {
 
         
     }, onLocationError, option);
+    
+    map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, 
+    
+        map.animateCamera({
+            'tilt': 60,
+            'zoom': 18,
+            'bearing': 140
+        });
+    
+    );
 
     // Function that return a LatLng Object to Map
     function setPosition(lat, lng) {
