@@ -106,7 +106,7 @@ document.addEventListener("deviceready", function() {
   		'duration': 500 // 10 seconds
      	});
      	
-       $(".PIN").animate({opacity:"0.1"});
+       //$(".PIN").animate({opacity:"0.1"});
     });
 
     // Function that return a LatLng Object to Map
