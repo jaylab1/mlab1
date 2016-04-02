@@ -99,6 +99,14 @@ document.addEventListener("deviceready", function() {
 
 
     map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
+    
+    	map.animateCamera({
+  		'tilt': 60,
+  		'zoom': 18,
+  		'bearing': 140,
+  		'duration': 10000 // 10 seconds
+     	});
+    	
         alert('HMAR');
     });
 
