@@ -105,8 +105,6 @@ document.addEventListener("deviceready", function() {
   		'bearing': 140,
   		'duration': 500 // 10 seconds
      	});
-    	
-        alert('HMAR');
     });
 
     // Function that return a LatLng Object to Map
