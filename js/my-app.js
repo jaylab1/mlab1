@@ -41,10 +41,12 @@ document.addEventListener("deviceready", function() {
     });
 
     
-    map.on(plugin.google.maps.event.MAP_READY, function(position) {
-            // Defining markers for demo
+    map.on(plugin.google.maps.event.MAP_READY, function(location) {
+            
+            alert(location.latLng.lat, location.latLng.lng);
+            
             map.animateCamera({
-                'target': setPosition(position.coords.latitude, position.coords.longitude),
+                'target': setPosition(location.latLng.lat, location.latLng.lng),
                 'zoom': 14,
                 'bearing': 140
    	    });
