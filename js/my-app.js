@@ -89,7 +89,7 @@ document.addEventListener("deviceready", function() {
         });
     }, onLocationError, option);
 
-    map.on(plugin.google.maps.event.CAMERA_CHANGE, function(position) {
+    /*map.on(plugin.google.maps.event.CAMERA_CHANGE, function(position) {
     	
 		 map.animateCamera({
                 'zoom': 17,
@@ -97,7 +97,7 @@ document.addEventListener("deviceready", function() {
             });
 
 
-    })
+    })*/
 
 
     map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
