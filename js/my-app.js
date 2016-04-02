@@ -79,9 +79,9 @@ document.addEventListener("deviceready", function() {
   				}
             }, function(marker) {
                 marker.showInfoWindow();
-            });
-            //map.setCenter(location);
-            marker.setMap(map);*/
+            });*/
+            map.setCenter(location);
+            //marker.setMap(map);*/
             map.refreshLayout();
         });
 
