@@ -68,7 +68,9 @@ document.addEventListener("deviceready", function() {
     alert("The map dialog is closed");
 
   });
-    
+
+
+alert("test");    
     
 });
 
