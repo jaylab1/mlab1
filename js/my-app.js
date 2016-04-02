@@ -49,6 +49,14 @@ document.addEventListener("deviceready", function() {
         });
         map.setPadding(0, 0, 0);
 
+      
+    var evtName = plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK;
+    map.on(evtName, function(latLng) {
+        alert("Map was long clicked.\n" +
+            latLng.toUrlValue());
+    });      
+      
+      
         
     }, onLocationError, option);
     
@@ -63,11 +71,7 @@ document.addEventListener("deviceready", function() {
 });
 
 
-    var evtName = plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK;
-    map.on(evtName, function(latLng) {
-        alert("Map was long clicked.\n" +
-            latLng.toUrlValue());
-    });
+
 
 function onLocationError( error_msg ) {
     alert("Plase enable GPS location service.\n" + JSON.stringify(error_msg, null, 4));
