@@ -59,7 +59,7 @@ document.addEventListener("deviceready", function() {
         };*/
 
         // Capturing event when Map load are ready.
-        map.addEventListener(plugin.google.maps.event.MAP_READY, function(position) {
+        /*map.addEventListener(plugin.google.maps.event.MAP_READY, function(position) {
             // Defining markers for demo
             map.animateCamera({
                 'target': setPosition(position.coords.latitude, position.coords.longitude),
@@ -83,10 +83,10 @@ document.addEventListener("deviceready", function() {
             }, function(marker) {
                 marker.showInfoWindow();
             }); */
-            map.setCenter(location);
-            marker.setMap(map);
-            map.refreshLayout();
-        });
+            //map.setCenter(location);
+            //marker.setMap(map);
+            //map.refreshLayout();
+        //})
     }, onLocationError, option);
 
     /*map.on(plugin.google.maps.event.CAMERA_CHANGE, function(position) {
