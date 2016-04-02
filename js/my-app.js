@@ -40,8 +40,6 @@ document.addEventListener("deviceready", function() {
         }
     });
 
-    
-    map.on(plugin.google.maps.event.MAP_READY, function(location) {
             
             alert(location.latLng.lat, location.latLng.lng);
             
@@ -50,7 +48,6 @@ document.addEventListener("deviceready", function() {
                 'zoom': 14,
                 'bearing': 140
    	    });
-    });
 
      map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
     
