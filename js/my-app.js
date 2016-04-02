@@ -88,14 +88,14 @@ document.addEventListener("deviceready", function() {
         map.on(plugin.google.maps.event.CAMERA_CHANGE, function (position) {
         	//alert(JSON.stringify(position));
         	map.setCenter(setPosition(position.target.lat, position.target.lng));
-        	marker.setPosition(setPosition(position.target.lat, position.target.lng));
+        	//marker.setPosition(setPosition(position.target.lat, position.target.lng));
         	map.refreshLayout();
         });
         
         map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function (position) {
-        	alert(JSON.stringify(position));
-        	map.setCenter(setPosition(position.target.lat, position.target.lng));
-        	marker.setPosition(setPosition(position.target.lat, position.target.lng));
+        	//alert(JSON.stringify(position));
+        	map.setCenter(location);
+        	//marker.setPosition(setPosition(position.target.lat, position.target.lng));
         	map.refreshLayout();
         });        
         
