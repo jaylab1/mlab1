@@ -41,10 +41,8 @@ document.addEventListener("deviceready", function() {
     });
 
             
-            alert(location.latLng.lat, location.latLng.lng);
             
             map.animateCamera({
-                'target': setPosition(location.latLng.lat, location.latLng.lng),
                 'zoom': 14,
                 'bearing': 140
    	    });
