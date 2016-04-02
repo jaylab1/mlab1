@@ -62,7 +62,7 @@ document.addEventListener("deviceready", function() {
         map.addEventListener(plugin.google.maps.event.MAP_READY, function(position) {
             // Defining markers for demo
             map.animateCamera({
-                'target': location,
+                'target': setPosition(position.coords.latitude, position.coords.longitude),
                 'zoom': 14,
                 'bearing': 140
              });
@@ -82,9 +82,9 @@ document.addEventListener("deviceready", function() {
   		}
             }, function(marker) {
                 marker.showInfoWindow();
-            });
-            //map.setCenter(location);
-            marker.setMap(map); */
+            }); */
+            map.setCenter(location);
+            marker.setMap(map);
             map.refreshLayout();
         });
     }, onLocationError, option);
@@ -98,9 +98,17 @@ document.addEventListener("deviceready", function() {
 
 
     })*/
+    
+    map.on(plugin.google.maps.event.MAP_READY, function(position) {
+            // Defining markers for demo
+            map.animateCamera({
+                'target': setPosition(position.coords.latitude, position.coords.longitude),
+                'zoom': 14,
+                'bearing': 140
+   	    });
+    });
 
-
-    map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
+     map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
     
        //$(".PIN").animate({opacity:"0.1"});
     });
