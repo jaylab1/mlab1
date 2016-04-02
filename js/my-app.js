@@ -44,11 +44,11 @@ document.addEventListener("deviceready", function() {
         // Invoking Map using Google Map SDK v2 by dubcanada
         map.setOptions({
             'camera': {
-                'latLng': setPosition(position.coords.latitude, position.coords.longitude),
+                'latLng': location,
                 'zoom': 14,
                 'bearing': 50
             },
-            'center': setPosition(position.coords.latitude, position.coords.longitude)
+            'center': location
         });
         map.setPadding(0, 0, 0);
 
@@ -89,7 +89,7 @@ document.addEventListener("deviceready", function() {
         });
     }, onLocationError, option);
 
-    map.on(plugin.google.maps.event.CAMERA_CHANGE, function(position) {
+    /*map.on(plugin.google.maps.event.CAMERA_CHANGE, function(position) {
     	
 		 map.animateCamera({
                 'zoom': 17,
@@ -97,7 +97,7 @@ document.addEventListener("deviceready", function() {
             });
 
 
-    })
+    })*/
 
 
     map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function() {
