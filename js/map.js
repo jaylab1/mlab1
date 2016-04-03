@@ -57,7 +57,7 @@ document.addEventListener("deviceready", function() {
     	});
     
     
-	map.on(plugin.google.maps.event.MAP_LONG_CLICK, function(position) {
+	map.on(plugin.google.maps.event.MAP_CLICK, function() {
 		
 		alert("Testing");
 		
