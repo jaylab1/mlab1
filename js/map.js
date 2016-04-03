@@ -44,7 +44,7 @@ document.addEventListener("deviceready", function() {
         });
         
        
-	setTimeout(function(){
+	/*setTimeout(function(){
   			
             map.animateCamera({
                 'zoom': 14,
@@ -54,21 +54,35 @@ document.addEventListener("deviceready", function() {
             ONSTOP();
   			
   			
-	},2000);
+	},2000);*/
 
 
             
           
-	map.on(plugin.google.maps.event.MAP_CLICK, function () {
+	map.on(plugin.google.maps.event.CAMERA_CHANGE, function () {
 		
-		ONMOVE();
+		/*ONMOVE();
 		
 		setTimeout(function(){
   			ONSTOP();
-		},7000);
+		},7000);*/
 		
     	});
     	
+	map.on(plugin.google.maps.event.MAP_CLICK, function () {
+		
+    		map.getCameraPosition(function(camera) {
+    		
+  		var buff = ["Current camera position:\n",
+      		"latitude:" + camera.target.lat,
+      		"longitude:" + camera.target.lng,
+      		"zoom:" + camera.zoom,
+      		"tilt:" + camera.tilt,
+        	"bearing:" + camera.bearing].join("\n");
+        	
+  		alert(buff);
+       		});
+       });
 
     }, onLocationError, option);
 	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
@@ -99,8 +113,7 @@ function onLocationError( error_msg ) {
 function ONMOVE(){
 	
   $( ".PIN" ).animate({
-    width:'60px',
-    height:'78.5px';
+    opacity: 0.25
   }, 100, function() {
     // Animation complete.
   });
@@ -109,6 +122,11 @@ function ONMOVE(){
 
 
 function ONSTOP(){
-
+	
+  $( ".PIN" ).animate({
+    opacity: 1
+  }, 500, function() {
+    // Animation complete.
+  });
   
 }
