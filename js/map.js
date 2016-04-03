@@ -71,7 +71,7 @@ document.addEventListener("deviceready", function() {
             
             
         map.animateCamera({
-            	'target' : getLocation(),
+            	'latLng' : getLocation(),
                 'zoom'   : 14,
                 'bearing': 140
    	    });
