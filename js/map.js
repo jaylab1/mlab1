@@ -1,7 +1,7 @@
 // Add Google Native Map
 document.addEventListener("deviceready", function() {
     
-    
+    alert("ZOOM");
 
     var div = document.getElementById("map_canvas");
     
@@ -59,7 +59,7 @@ document.addEventListener("deviceready", function() {
     	});
     	
     	
-    	alert("ZOOM");
+    	
     
 
 });
