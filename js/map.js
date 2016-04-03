@@ -59,7 +59,7 @@ document.addEventListener("deviceready", function() {
 
             
           
-	map.on(plugin.google.maps.event.CAMERA_CHANGE, function () {
+	map.on(plugin.google.maps.event.MAP_CLICK, function () {
 		
 		ONMOVE();
 		
@@ -69,7 +69,7 @@ document.addEventListener("deviceready", function() {
 		
     	});
     	
-	map.on(plugin.google.maps.event.MAP_CLICK, function () {
+	/*map.on(plugin.google.maps.event.MAP_CLICK, function () {
 		
     		map.getCameraPosition(function(camera) {
     		
@@ -82,7 +82,7 @@ document.addEventListener("deviceready", function() {
         	
   		alert(buff);
        		});
-       });
+       });*/
 
     }, onLocationError, option);
 	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
