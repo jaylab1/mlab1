@@ -38,7 +38,7 @@ document.addEventListener("deviceready", function() {
                 'latLng': location,
                 'zoom': 5,
                 'bearing': 50,
-                'duration': 10000 // 10 seconds
+                'duration': 15000 // 10 seconds
             },
             'center': location,
         });
@@ -54,7 +54,7 @@ document.addEventListener("deviceready", function() {
             ONSTOP();
   			
   			
-	},3000);
+	},2000);
 
 
             
