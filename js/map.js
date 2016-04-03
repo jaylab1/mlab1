@@ -86,7 +86,7 @@ document.addEventListener("deviceready", function() {
   			if (CURRENT != camera.target.lat+camera.target.lng ){
   				
   				
-  				ONMOVE();
+  			
   				
   			}
   			
@@ -129,15 +129,6 @@ function onLocationError( error_msg ) {
 
 
 
-function ONMOVE(){
-	
-  $( ".PIN" ).animate({
-    background-color:'#333';
-  }, 100, function() {
-    // Animation complete.
-  });
-  
-}
 
 
 function ONSTOP(){
