@@ -11,7 +11,14 @@ document.addEventListener("deviceready", function() {
         maximumAge: 3000
     };
 
-    var map = plugin.google.maps.Map.getMap(div, {
+        
+    //START NAVIGATOR ////////////////////////////////////////////////////////////////////////////   
+    navigator.geolocation.getCurrentPosition(function (position) {
+        
+        var location = setPosition(position.coords.latitude, position.coords.longitude);
+        
+        
+	var map = plugin.google.maps.Map.getMap(div, {
             'controls': {
                 'compass': false,
                 'zoom': false,
@@ -24,15 +31,8 @@ document.addEventListener("deviceready", function() {
                 'rotate': true,
                 'zoom': true
             }
-    });
-        
-        
-    //START NAVIGATOR ////////////////////////////////////////////////////////////////////////////   
-    navigator.geolocation.getCurrentPosition(function (position) {
-        
-        
-        var location = setPosition(position.coords.latitude, position.coords.longitude);
-
+    	});  
+    	
         map.setOptions({
             'camera': {
                 'latLng': location,
