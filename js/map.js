@@ -69,20 +69,6 @@ document.addEventListener("deviceready", function() {
 		
     	});
     	
-	/*map.on(plugin.google.maps.event.MAP_CLICK, function () {
-		
-    		map.getCameraPosition(function(camera) {
-    		
-  		var buff = ["Current camera position:\n",
-      		"latitude:" + camera.target.lat,
-      		"longitude:" + camera.target.lng,
-      		"zoom:" + camera.zoom,
-      		"tilt:" + camera.tilt,
-        	"bearing:" + camera.bearing].join("\n");
-        	
-  		alert(buff);
-       		});
-       });*/
 
     }, onLocationError, option);
 	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
@@ -113,7 +99,6 @@ function onLocationError( error_msg ) {
 function ONMOVE(){
 	
   $( ".PIN" ).animate({
-    opacity:1,
     width:'60px',
     height:'78.5px';
   }, 100, function() {
