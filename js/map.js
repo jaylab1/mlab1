@@ -41,11 +41,19 @@ document.addEventListener("deviceready", function() {
             },
             'center': location,
         });
-
+        
+       
+	setTimeout(function(){
+  			
             map.animateCamera({
                 'zoom': 14,
                 'bearing': 140
-            });
+            });  			
+  			
+  			
+	},7000);
+
+
             
           
 	map.on(plugin.google.maps.event.CAMERA_CHANGE, function () {
