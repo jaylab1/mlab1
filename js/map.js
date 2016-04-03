@@ -35,13 +35,13 @@ document.addEventListener("deviceready", function() {
 
         map.setOptions({
             'camera': {
-                'latLng': setPosition(position.coords.latitude, position.coords.longitude),
+                'latLng': location,
                 'zoom': 14,
                 'bearing': 50
             },
             'center': setPosition(position.coords.latitude, position.coords.longitude)
         });
-        map.setPadding(0, 0, 0);
+        //map.setPadding(0, 0, 0);
 
         // Capturing event when Map load are ready.
         map.addEventListener(plugin.google.maps.event.MAP_READY, function(){
