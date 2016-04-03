@@ -89,7 +89,7 @@ function ONMOVE(){
 	
   $( ".PIN" ).animate({
     opacity: 0.25
-  }, 5000, function() {
+  }, 100, function() {
     // Animation complete.
   });
   
