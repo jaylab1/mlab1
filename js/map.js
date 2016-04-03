@@ -52,6 +52,10 @@ document.addEventListener("deviceready", function() {
 		
 		ONMOVE();
 		
+		setTimeout(function(){
+  			ONSTOP();
+		}, 500);
+		
     	});
 
 
@@ -86,6 +90,17 @@ function ONMOVE(){
   $( ".PIN" ).animate({
     opacity: 0.25
   }, 5000, function() {
+    // Animation complete.
+  });
+  
+}
+
+
+function ONSTOP(){
+	
+  $( ".PIN" ).animate({
+    opacity: 1
+  }, 100, function() {
     // Animation complete.
   });
   
