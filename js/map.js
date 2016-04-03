@@ -36,10 +36,10 @@ document.addEventListener("deviceready", function() {
         map.setOptions({
             'camera': {
                 'latLng': location,
-                'zoom': 20,
+                'zoom': 18,
                 'bearing': 50
             },
-            'center': setPosition(position.coords.latitude, position.coords.longitude)
+            'center': location,
         });
 
             map.animateCamera({
