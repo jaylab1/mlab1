@@ -49,7 +49,7 @@ document.addEventListener("deviceready", function() {
             map.animateCamera({
                 'zoom': 14,
                 'bearing': 0,
-                'duration': 15000 // 10 seconds
+                'duration': 5000 // 10 seconds
             }); 
             
             ONSTOP();
@@ -71,18 +71,9 @@ document.addEventListener("deviceready", function() {
     	});
     	
 	map.on(plugin.google.maps.event.MAP_CLICK, function () {
-		
-    		map.getCameraPosition(function(camera) {
-    		
-  		var buff = ["Current camera position:\n",
-      		"latitude:" + camera.target.lat,
-      		"longitude:" + camera.target.lng,
-      		"zoom:" + camera.zoom,
-      		"tilt:" + camera.tilt,
-        	"bearing:" + camera.bearing].join("\n");
-        	
-  		alert(buff);
-       		});
+	
+		ONMOVE()	
+			
        });
 
     }, onLocationError, option);
@@ -114,7 +105,7 @@ function onLocationError( error_msg ) {
 function ONMOVE(){
 	
   $( ".PIN" ).animate({
-    opacity: 0.25
+    width:'60px',
   }, 100, function() {
     // Animation complete.
   });
