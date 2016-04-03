@@ -48,10 +48,12 @@ document.addEventListener("deviceready", function() {
             map.animateCamera({
                 'zoom': 14,
                 'bearing': 140
-            });  			
+            }); 
+            
+            ONSTOP();
   			
   			
-	},7000);
+	},5000);
 
 
             
@@ -108,7 +110,7 @@ function ONSTOP(){
 	
   $( ".PIN" ).animate({
     opacity: 1
-  }, 100, function() {
+  }, 500, function() {
     // Animation complete.
   });
   
