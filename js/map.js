@@ -37,24 +37,25 @@ document.addEventListener("deviceready", function() {
             'camera': {
                 'latLng': location,
                 'zoom': 10,
-                'bearing': 50,
-                'duration': 15000 // 10 seconds
+                'bearing': 140,
+                
             },
             'center': location,
         });
         
        
-	/*setTimeout(function(){
+	setTimeout(function(){
   			
             map.animateCamera({
                 'zoom': 14,
-                'bearing': 140
+                'bearing': 0,
+                'duration': 15000 // 10 seconds
             }); 
             
             ONSTOP();
   			
   			
-	},2000);*/
+	},2000);
 
 
             
