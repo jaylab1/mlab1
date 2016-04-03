@@ -54,7 +54,15 @@ document.addEventListener("deviceready", function() {
 
 	map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function (position) {
 		console.log(position);
-    });
+    	});
+    
+    
+	map.on(plugin.google.maps.event.MAP_LONG_CLICK, function(position) {
+		
+		alert("Testing");
+		
+
+	});
     
     
 
