@@ -1,7 +1,10 @@
 // Add Google Native Map
 document.addEventListener("deviceready", function() {
-  // Getting the map selector in DOM
+    
+    
+
     var div = document.getElementById("map_canvas");
+    
     var option = {
         enableHighAccuracy: true,      // Force GPS
         timeout: 5000,
@@ -21,10 +24,15 @@ document.addEventListener("deviceready", function() {
                 'rotate': true,
                 'zoom': true
             }
-        });
+    });
+        
+        
+    //START NAVIGATOR ////////////////////////////////////////////////////////////////////////////   
     navigator.geolocation.getCurrentPosition(function (position) {
+        
+        
         var location = setPosition(position.coords.latitude, position.coords.longitude);
-        // Invoking Map using Google Map SDK v2 by dubcanada
+
         map.setOptions({
             'camera': {
                 'latLng': setPosition(position.coords.latitude, position.coords.longitude),
@@ -35,12 +43,6 @@ document.addEventListener("deviceready", function() {
         });
         map.setPadding(0, 0, 0);
 
-        var marker = {
-            'position': setPosition(position.coords.latitude, position.coords.longitude),
-            'title': "3:00min",
-            'icon': 'www/img/icon.png'
-        };
-
         // Capturing event when Map load are ready.
         map.addEventListener(plugin.google.maps.event.MAP_READY, function(){
             // Defining markers for demo
@@ -50,46 +52,27 @@ document.addEventListener("deviceready", function() {
                 'bearing': 140
             });
 
-            	/* map.addMarker({
-                'marker': marker,
-                'position': marker.position,
-                'animation': plugin.google.maps.Animation.DROP,
-                'rotate': 45,
-                'draggable': true,
-                'title': marker.title,
-                'icon': {
-                    url: marker.icon
-                },
-                'styles' : {
-    			'position': 'fixed'
-  		}
-            }, function(marker) {
-                marker.showInfoWindow();
-            });
             //map.setCenter(location);
-            marker.setMap(map); */
-            map.refreshLayout();
+            //marker.setMap(map); */
+            //map.refreshLayout();
         });
     }, onLocationError, option);
-	
-	map.on(plugin.google.maps.event.CAMERA_CHANGE, function (position) {
-		var map = this;
-		map.refreshLayout();
-    	alert(JSON.stringify(position));
-    	map.setCenter(setPosition(position.target.lat, position.target.lng));
-    	// marker.setPosition(setPosition(position.target.lat, position.target.lng));
-    });
+	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
 
 
 	map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function (position) {
 		console.log(position);
     });
+    
+    
 
     // Function that return a LatLng Object to Map
     function setPosition(lat, lng) {
         return new plugin.google.maps.LatLng(lat, lng);
     }
 });
+
+//END DEVICE READY////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function onLocationError( error_msg ) {
     alert("Plase enable GPS location service.\n" + JSON.stringify(error_msg, null, 4));
