@@ -136,7 +136,6 @@ function onLocationError( error_msg ) {
 function ONMOVE(){
 	
   $( ".PIN" ).animate({
-    width:'60px',
     height:'78.5px';
   }, 700, function() {
     // Animation complete.
@@ -147,7 +146,6 @@ function ONMOVE(){
 function OFFMOVE(){
 	
   $( ".PIN" ).animate({
-    width:'120px',
     height:'157px';
   }, 700, function() {
     // Animation complete.
