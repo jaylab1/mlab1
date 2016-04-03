@@ -65,7 +65,7 @@ body.with-panel-right-reveal .panel-overlay {
    background-size:cover;
    top: 50%;
    left: 50%;
-   margin-top: -145px; /* Half the height */
+   margin-top: -150px; /* Half the height */
    margin-left: -60px; /* Half the width */
    opacity:0;
    
