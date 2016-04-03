@@ -58,7 +58,7 @@ document.addEventListener("deviceready", function() {
 
             //map.setCenter(location);
             //marker.setMap(map); */
-            //map.refreshLayout();
+            map.refreshLayout();
         });*/
         
     }, onLocationError, option);
