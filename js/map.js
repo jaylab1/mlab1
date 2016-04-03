@@ -86,7 +86,7 @@ document.addEventListener("deviceready", function() {
   			if (CURRENT != camera.target.lat+camera.target.lng ){
   				
   				
-  				alert("different");
+  				ONMOVE();
   				
   			}
   			
