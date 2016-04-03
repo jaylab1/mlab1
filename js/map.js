@@ -52,8 +52,10 @@ document.addEventListener("deviceready", function() {
 	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
 
 
-	map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function (position) {
-		console.log(position);
+	map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function () {
+		
+		alert("ZOOM");
+		
     	});
     
     
