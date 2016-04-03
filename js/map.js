@@ -51,6 +51,8 @@ document.addEventListener("deviceready", function() {
     }, onLocationError, option);
 	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
 
+	alert("test");
+
 
 	map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function () {
 		
