@@ -36,8 +36,9 @@ document.addEventListener("deviceready", function() {
         map.setOptions({
             'camera': {
                 'latLng': location,
-                'zoom': 4,
-                'bearing': 50
+                'zoom': 5,
+                'bearing': 50,
+                'duration': 10000 // 10 seconds
             },
             'center': location,
         });
@@ -53,7 +54,7 @@ document.addEventListener("deviceready", function() {
             ONSTOP();
   			
   			
-	},5000);
+	},3000);
 
 
             
