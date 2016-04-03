@@ -54,7 +54,7 @@ document.addEventListener("deviceready", function() {
 		
 		setTimeout(function(){
   			ONSTOP();
-		}, 500);
+		},3000);
 		
     	});
 
