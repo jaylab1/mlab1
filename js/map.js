@@ -86,7 +86,11 @@ document.addEventListener("deviceready", function() {
   			if (CURRENT != camera.target.lat+camera.target.lng ){
   				
   				
-  				alert("different");
+  				ONMOVE();
+  				
+  			}else{
+  				
+  				OFFMOVE();
   				
   			}
   			
@@ -132,8 +136,20 @@ function onLocationError( error_msg ) {
 function ONMOVE(){
 	
   $( ".PIN" ).animate({
-    height:'60px',
-  }, 100, function() {
+    width:'60px',
+    height:'78.5px';
+  }, 700, function() {
+    // Animation complete.
+  });
+  
+}
+
+function OFFMOVE(){
+	
+  $( ".PIN" ).animate({
+    width:'120px',
+    height:'157px';
+  }, 700, function() {
     // Animation complete.
   });
   
