@@ -1,7 +1,7 @@
 // Add Google Native Map
 document.addEventListener("deviceready", function() {
     
-    alert("ZOOM");
+    
 
     var div = document.getElementById("map_canvas");
     
@@ -51,6 +51,7 @@ document.addEventListener("deviceready", function() {
     }, onLocationError, option);
 	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
 
+	alert("ZOOM");
 
 	map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function () {
 		
