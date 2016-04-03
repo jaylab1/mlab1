@@ -75,6 +75,33 @@ document.addEventListener("deviceready", function() {
 		ONMOVE()	
 			
        });
+       
+       
+	setInterval(function(){ 
+		
+		map.getCameraPosition(function(camera) {
+  			
+  			var CURRENT = localStorage.getItem('CURRENTlocation');
+  			
+  			if (CURRENT != camera.target.lat+camera.target.lng ){
+  				
+  				
+  				alert("different");
+  				
+  			}
+  			
+  			var VALUE = camera.target.lat+camera.target.lng;
+  		
+  			localStorage.setItem('CURRENTlocation', VALUE);
+  			
+  			
+		});
+ 
+ 				
+ 
+	}, 3000);       
+       
+       
 
     }, onLocationError, option);
 	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
