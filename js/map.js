@@ -2,8 +2,6 @@
 document.addEventListener("deviceready", function() {
     
     
-
-    var div = document.getElementById("map_canvas");
     
     var option = {
         enableHighAccuracy: true,      // Force GPS
@@ -16,6 +14,8 @@ document.addEventListener("deviceready", function() {
     navigator.geolocation.getCurrentPosition(function (position) {
         
         var location = setPosition(position.coords.latitude, position.coords.longitude);
+        
+        var div = document.getElementById("map_canvas");
         
         
 	var map = plugin.google.maps.Map.getMap(div, {
@@ -46,19 +46,21 @@ document.addEventListener("deviceready", function() {
                 'zoom': 14,
                 'bearing': 140
             });
-
-
-    }, onLocationError, option);
-	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
-
-	alert("test");
-
-
+            
+          
 	map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function () {
 		
 		alert("ZOOM");
 		
     	});
+
+
+    }, onLocationError, option);
+	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
+
+
+
+
     	
     	
     	
