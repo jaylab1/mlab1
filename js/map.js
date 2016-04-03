@@ -45,12 +45,12 @@ document.addEventListener("deviceready", function() {
        
 	setTimeout(function(){
   			
-            map.animateCamera({
+            /*map.animateCamera({
                 'zoom': 14,
                 'bearing': 140
             }); 
             
-            ONSTOP();
+            ONSTOP();*/
   			
   			
 	},5000);
