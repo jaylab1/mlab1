@@ -48,7 +48,7 @@ document.addEventListener("deviceready", function() {
             });
             
           
-	map.on(plugin.google.maps.event.MY_LOCATION_BUTTON_CLICK, function () {
+	map.on(plugin.google.maps.event.MAP_LONG_CLICK, function () {
 		
 		alert("ZOOM");
 		
