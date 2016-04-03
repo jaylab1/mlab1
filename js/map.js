@@ -86,7 +86,7 @@ document.addEventListener("deviceready", function() {
   			if (CURRENT != camera.target.lat+camera.target.lng ){
   				
   				
-  			
+  			     $('.PIN').addClass('animation-target');
   				
   			}
   			
