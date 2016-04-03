@@ -109,11 +109,6 @@ function ONMOVE(){
 
 
 function ONSTOP(){
-	
-  $( ".PIN" ).animate({
-    opacity: 1
-  }, 500, function() {
-    // Animation complete.
-  });
+
   
 }
