@@ -50,7 +50,7 @@ document.addEventListener("deviceready", function() {
           
 	map.on(plugin.google.maps.event.CAMERA_CHANGE, function () {
 		
-		alert("ZOOM");
+		ONMOVE();
 		
     	});
 
@@ -77,4 +77,16 @@ function setPosition(lat, lng) {
 
 function onLocationError( error_msg ) {
          alert("Plase enable GPS location service.\n" + JSON.stringify(error_msg, null, 4));
+}
+
+
+
+function ONMOVE(){
+	
+  $( ".PIN" ).animate({
+    opacity: 0.25
+  }, 5000, function() {
+    // Animation complete.
+  });
+  
 }
