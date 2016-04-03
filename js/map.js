@@ -36,7 +36,7 @@ document.addEventListener("deviceready", function() {
         map.setOptions({
             'camera': {
                 'latLng': location,
-                'zoom': 50,
+                'zoom': 4,
                 'bearing': 50
             },
             'center': location,
@@ -45,12 +45,12 @@ document.addEventListener("deviceready", function() {
        
 	setTimeout(function(){
   			
-            /*map.animateCamera({
+            map.animateCamera({
                 'zoom': 14,
                 'bearing': 140
             }); 
             
-            ONSTOP();*/
+            ONSTOP();
   			
   			
 	},5000);
@@ -60,11 +60,11 @@ document.addEventListener("deviceready", function() {
           
 	map.on(plugin.google.maps.event.CAMERA_CHANGE, function () {
 		
-		ONMOVE();
+		/*ONMOVE();
 		
 		setTimeout(function(){
   			ONSTOP();
-		},7000);
+		},7000);*/
 		
     	});
 
