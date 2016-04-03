@@ -36,7 +36,7 @@ document.addEventListener("deviceready", function() {
         map.setOptions({
             'camera': {
                 'latLng': location,
-                'zoom': 18,
+                'zoom': 50,
                 'bearing': 50
             },
             'center': location,
