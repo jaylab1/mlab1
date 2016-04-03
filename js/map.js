@@ -71,7 +71,7 @@ document.addEventListener("deviceready", function() {
             
             
         map.animateCamera({
-            	'latLng' : getLocation(),
+            	'target': GOOGLE,
                 'zoom'   : 14,
                 'bearing': 140
    	    });
