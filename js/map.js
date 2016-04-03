@@ -57,25 +57,20 @@ document.addEventListener("deviceready", function() {
 		alert("ZOOM");
 		
     	});
-    
-    
-	map.on(plugin.google.maps.event.MAP_CLICK, function() {
-		
-		alert("Testing");
-		
-
-	});
-    
+    	
+    	
+    	alert("ZOOM");
     
 
-    // Function that return a LatLng Object to Map
-    function setPosition(lat, lng) {
-        return new plugin.google.maps.LatLng(lat, lng);
-    }
 });
 
 //END DEVICE READY////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+function setPosition(lat, lng) {
+        return new plugin.google.maps.LatLng(lat, lng);
+ }
+
+
 function onLocationError( error_msg ) {
-    alert("Plase enable GPS location service.\n" + JSON.stringify(error_msg, null, 4));
+         alert("Plase enable GPS location service.\n" + JSON.stringify(error_msg, null, 4));
 }
