@@ -77,12 +77,14 @@ body.with-panel-right-reveal .panel-overlay {
 
 
 
+
+
 .animation-target {
-  -webkit-animation: animation 1500ms linear both;
-  animation: animation 1500ms linear both;
+  -webkit-animation: animation 750ms linear both;
+  animation: animation 750ms linear both;
 }
 
-/* Generated with Bounce.js. Edit at http://goo.gl/Gb98dD */
+/* Generated with Bounce.js. Edit at http://goo.gl/GDmHO4 */
 
 @-webkit-keyframes animation { 
   0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
@@ -131,6 +133,8 @@ body.with-panel-right-reveal .panel-overlay {
   89.32% { -webkit-transform: matrix3d(0.2, 0, 0, 0, 0, 0.2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.2, 0, 0, 0, 0, 0.2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   100% { -webkit-transform: matrix3d(0.2, 0, 0, 0, 0, 0.2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.2, 0, 0, 0, 0, 0.2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
+
+
 
 
 
