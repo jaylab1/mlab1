@@ -70,11 +70,14 @@ document.addEventListener("deviceready", function() {
 
             
             
-        map.animateCamera({
-            	'target': GOOGLE,
-                'zoom'   : 14,
-                'bearing': 140
-   	    });
+        map.setOptions({
+            'camera': {
+                'latLng': getLocation(),
+                'zoom': 14,
+                'bearing': 50
+            },
+            'center': setPosition(position.coords.latitude, position.coords.longitude)
+        });
 
 
 
