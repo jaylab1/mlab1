@@ -88,10 +88,6 @@ document.addEventListener("deviceready", function() {
   				
   				//ONMOVE();
   				
-  			}else{
-  				
-  				//OFFMOVE();
-  				
   			}
   			
   			var VALUE = camera.target.lat+camera.target.lng;
