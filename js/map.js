@@ -139,15 +139,6 @@ function ONMOVE(){
   
 }
 
-function OFFMOVE(){
-	
-  $( ".PIN" ).animate({
-    height:'157px';
-  }, 700, function() {
-    // Animation complete.
-  });
-  
-}
 
 
 function ONSTOP(){
