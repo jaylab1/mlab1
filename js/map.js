@@ -88,6 +88,10 @@ document.addEventListener("deviceready", function() {
   				
   			     $('.PIN').addClass('animation-target');
   				
+  			}else{
+  				
+  		             $('.PIN').addClass('animation-target1');
+  				
   			}
   			
   			var VALUE = camera.target.lat+camera.target.lng;
