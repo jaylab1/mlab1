@@ -114,8 +114,8 @@ function ONMOVE(){
 	
   $( ".PIN" ).animate({
     opacity:1;
-    width:60px;
-    height:78.5px;
+    width:'60px';
+    height:'78.5px';
   }, 100, function() {
     // Animation complete.
   });
