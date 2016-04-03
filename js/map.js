@@ -36,26 +36,18 @@ document.addEventListener("deviceready", function() {
         map.setOptions({
             'camera': {
                 'latLng': location,
-                'zoom': 14,
+                'zoom': 20,
                 'bearing': 50
             },
             'center': setPosition(position.coords.latitude, position.coords.longitude)
         });
-        //map.setPadding(0, 0, 0);
 
-        // Capturing event when Map load are ready.
-        map.addEventListener(plugin.google.maps.event.MAP_READY, function(){
-            // Defining markers for demo
             map.animateCamera({
-                'target': setPosition(position.coords.latitude, position.coords.longitude),
                 'zoom': 14,
                 'bearing': 140
             });
 
-            //map.setCenter(location);
-            //marker.setMap(map); */
-            //map.refreshLayout();
-        });
+
     }, onLocationError, option);
 	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
 
