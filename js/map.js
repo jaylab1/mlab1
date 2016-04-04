@@ -86,12 +86,6 @@ document.addEventListener("deviceready", function() {
   			if (CURRENT != camera.target.lat+camera.target.lng ){
   				
   				
-  			      $( ".ROUND" ).animate({
-    					width:'50%';
-  			      }, 500, function() {
-    				// Animation complete.
-  			      });
-  				
   			}else{
   				
   				
