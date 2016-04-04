@@ -272,8 +272,8 @@ body.with-panel-right-reveal .panel-overlay {
 .animation-search {
 	
   	margin-top:-100px
-  	animation: animation-search 1s;
-  	-webkit-animation: animation-search 1s; /* Safari and Chrome */
+  	animation: animation-search 1s  linear forwards;
+  	-webkit-animation: animation-search 1s linear forwards; /* Safari and Chrome */
   	
 }
 
