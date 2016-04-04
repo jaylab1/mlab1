@@ -271,7 +271,8 @@ body.with-panel-right-reveal .panel-overlay {
 
 .animation-search {
 	-webkit-animation: animation-search 1s 1;
-	animation-iteration-count: 1
+	-webkit-timing-function:ease;
+	-webkit-iteration-count:1;
 }
 
 @-webkit-keyframes animation-search {
