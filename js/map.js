@@ -89,7 +89,7 @@ document.addEventListener("deviceready", function() {
   				$( '.ROUND' ).removeClass( "animation-target1" ); 
   				$( '.ROUND' ).addClass( "animation-target" );
                 
-   				$( '.SEARCH' ).removeClass( "animation-search1" ); 
+   		
   				$( '.SEARCH' ).addClass( "animation-search" );
   				
   			}else{
@@ -97,7 +97,7 @@ document.addEventListener("deviceready", function() {
   				$( '.ROUND' ).addClass( "animation-target1" );
                 
   				$( '.SEARCH' ).removeClass( "animation-search" ); 
-  				$( '.SEARCH' ).addClass( "animation-search1" );
+  		
   				
   			}
   			
