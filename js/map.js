@@ -89,7 +89,7 @@ document.addEventListener("deviceready", function() {
   				
   			}else{
   				
-  				$( '.ROUND' ).removeClass( "animation-target" );
+  				$( '.ROUND' ).addClass( "animation-target1" );
   				
   			}
   			
@@ -102,7 +102,7 @@ document.addEventListener("deviceready", function() {
  
  				
  
-	}, 3000);       
+	}, 2000);       
        
        
 
