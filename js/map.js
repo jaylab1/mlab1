@@ -87,7 +87,7 @@ document.addEventListener("deviceready", function() {
   				
   				
   			      $( ".ROUND" ).animate({
-    					width:50%;
+    					width:'50%';
   			      }, 500, function() {
     				// Animation complete.
   			      });
@@ -95,7 +95,7 @@ document.addEventListener("deviceready", function() {
   			}else{
   				
   			      $( ".ROUND" ).animate({
-    					width:100%;
+    					width:'50%';
   			      }, 500, function() {
     				// Animation complete.
   			      });
