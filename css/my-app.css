@@ -270,7 +270,7 @@ body.with-panel-right-reveal .panel-overlay {
 /* try this code! */
 
 .animation-search {
-	-webkit-animation: animation-search 1s 5;
+	-webkit-animation: animation-search 1s 1;
 	animation-iteration-count: 1
 }
 
@@ -291,7 +291,7 @@ body.with-panel-right-reveal .panel-overlay {
  /* try this code! */
 
 .animation-search1 {
-	-webkit-animation: animation-search1 2s 5;
+	-webkit-animation: animation-search1 2s 1;
 }
 
 @-webkit-keyframes animation-search1 {
