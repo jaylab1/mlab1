@@ -88,10 +88,16 @@ document.addEventListener("deviceready", function() {
   				
   				$( '.ROUND' ).removeClass( "animation-target1" ); 
   				$( '.ROUND' ).addClass( "animation-target" );
+                
+   				$( '.SEARCH' ).removeClass( "animation-search1" ); 
+  				$( '.SEARCH' ).addClass( "animation-search" );
   				
   			}else{
   				$( '.ROUND' ).removeClass( "animation-target" ); 
   				$( '.ROUND' ).addClass( "animation-target1" );
+                
+  				$( '.SEARCH' ).removeClass( "animation-search" ); 
+  				$( '.SEARCH' ).addClass( "animation-search1" );
   				
   			}
   			
