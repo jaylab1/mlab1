@@ -85,7 +85,7 @@ document.addEventListener("deviceready", function() {
   			
   			if (CURRENT != camera.target.lat+camera.target.lng ){
   			
-  				$( .ROUND ).addClass( "animation-target" );	
+  				$( '.ROUND' ).addClass( "animation-target" );	
   				
   			}else{
   				
