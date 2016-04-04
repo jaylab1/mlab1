@@ -1,0 +1,72 @@
+.MENU-IMAGE{
+
+	position:absolute;
+	width:175px;
+	height:175px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:20px;
+	background-size:cover;
+	-moz-border-radius: 175px;
+	-webkit-border-radius: 175px;
+	border-radius: 175px;
+	border:1px solid #E45641;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	-moz-box-shadow: 0px 0px 5px #000000;
+	-webkit-box-shadow: 0px 0px 5px #000000;
+	box-shadow: 0px 0px 5px #000000;
+	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+
+}
+
+
+.menu {
+    
+    margin-top:200px;
+    
+}
+
+.menu h2{
+    
+    text-align:center;
+    color:#E45641;
+    margin:2px;
+    
+    
+}
+
+.menu h3{
+    
+     margin:2px;
+     text-align:center;
+     color:#666;   
+    
+}
+
+.menu ul{
+    
+   
+   margin:10px 0px 5px 0px;
+   list-style-type: none;
+   padding:0px;
+    
+}
+
+
+.menu ul li{
+    
+    font-weight:bold;
+    color:#999;
+    border-bottom:1px dashed #333;
+    padding:12px; 
+    margin:0px;
+    
+}
+
+.menu ul li i{
+    
+    margin:0px 20px 0px 5px;
+    
+}
