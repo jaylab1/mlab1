@@ -84,7 +84,8 @@ document.addEventListener("deviceready", function() {
   			var CURRENT = localStorage.getItem('CURRENTlocation');
   			
   			if (CURRENT != camera.target.lat+camera.target.lng ){
-  				
+  			
+  				$( .ROUND ).addClass( "animation-target" );	
   				
   			}else{
   				
