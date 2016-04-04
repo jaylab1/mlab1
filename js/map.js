@@ -86,11 +86,19 @@ document.addEventListener("deviceready", function() {
   			if (CURRENT != camera.target.lat+camera.target.lng ){
   				
   				
-  			    // $('.PIN').addClass('animation-target');
+  			      $( ".ROUND" ).animate({
+    					width:50%;
+  			      }, 500, function() {
+    				// Animation complete.
+  			      });
   				
   			}else{
   				
-  		             //$('.PIN').addClass('animation-target1');
+  			      $( ".ROUND" ).animate({
+    					width:100%;
+  			      }, 500, function() {
+    				// Animation complete.
+  			      });
   				
   			}
   			
