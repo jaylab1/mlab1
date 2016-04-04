@@ -89,6 +89,7 @@ document.addEventListener("deviceready", function() {
   				
   			}else{
   				
+  				$( '.ROUND' ).removeClass( "animation-target" );
   				
   			}
   			
