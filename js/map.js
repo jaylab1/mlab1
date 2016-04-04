@@ -94,11 +94,6 @@ document.addEventListener("deviceready", function() {
   				
   			}else{
   				
-  			      $( ".ROUND" ).animate({
-    					width:'50%';
-  			      }, 500, function() {
-    				// Animation complete.
-  			      });
   				
   			}
   			
