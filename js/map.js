@@ -1,7 +1,7 @@
 // Add Google Native Map
 document.addEventListener("deviceready", function() {
     
-    
+    localStorage.setItem('SEARCH', 'YES');
     
     var option = {
         enableHighAccuracy: true,      // Force GPS
@@ -89,10 +89,15 @@ document.addEventListener("deviceready", function() {
   				$( '.ROUND' ).removeClass( "animation-target1" ); 
   				$( '.ROUND' ).addClass( "animation-target" );
                 
-   		
+   				if (localStorage.getItem('SEARCH') == "YES")
   				$( '.SEARCH' ).addClass( "animation-search" );
   				
+  				localStorage.setItem('SEARCH', 'NO');
+  				
   			}else{
+  				
+  				localStorage.setItem('SEARCH', 'YES');
+  				
   				$( '.ROUND' ).removeClass( "animation-target" ); 
   				$( '.ROUND' ).addClass( "animation-target1" );
                 
