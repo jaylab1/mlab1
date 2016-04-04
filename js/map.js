@@ -99,10 +99,21 @@ document.addEventListener("deviceready", function() {
                 
   				$( '.SEARCH' ).removeClass( "animation-search" ); 
   				
- var request = {
-  'position': position
+LatLngBounds.prototype.getCenter = function() {
+    var centerLat = (this.southwest.lat + this.northeast.lat) / 2;
+
+    var swLng = this.southwest.lng;
+    var neLng = this.northeast.lng;
+    var sumLng = swLng + neLng;
+    var centerLng = sumLng / 2;
+
+    if ((swLng > 0 && neLng < 0 && sumLng < 180)) {
+        centerLng += sumLng > 0 ? -180 : 180;
+    }
+    return new LatLng(centerLat, centerLng);
 };
-plugin.google.maps.Geocoder.geocode(request, function(results) {
+
+plugin.google.maps.Geocoder.geocode(LatLngBounds.prototype.getCenter, function(results) {
   if (results.length) {
     var result = results[0];
     var position = result.position; 
