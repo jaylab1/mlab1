@@ -98,28 +98,7 @@ document.addEventListener("deviceready", function() {
   				$( '.ROUND' ).addClass( "animation-target1" );
                 
   				$( '.SEARCH' ).removeClass( "animation-search" ); 
-  				
-var request = {
-  'position': setPosition(camera.target.lat,camera.target.lng)
-};
-plugin.google.maps.Geocoder.geocode(request, function(results) {
-  if (results.length) {
-    var result = results[0];
-    var position = result.position; 
-    var address = [
-      result.subThoroughfare || "",
-      result.thoroughfare || "",
-      result.locality || "",
-      result.adminArea || "",
-      result.postalCode || "",
-      result.country || ""].join(", ");
-
-		alert(address);
-		
-  } else {
-    alert("Not found");
-  }
-});  				
+  				 				
   				
   		
   				
