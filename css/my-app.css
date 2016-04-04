@@ -77,7 +77,7 @@ body.with-panel-right-reveal .panel-overlay {
   position:absolute;
   margin:0 auto;
   width:100%;
-  top:0px;
+  top:1px;
   
   
 }
