@@ -270,17 +270,17 @@ body.with-panel-right-reveal .panel-overlay {
 /* try this code! */
 
 .animation-search {
-	-webkit-animation: animation-search 100s 5;
+	-webkit-animation: animation-search 15s 5;
 }
 
 @-webkit-keyframes animation-search {
 
 	from {
-		height:100%;
+		margin-top:0px;
 	}
 
 	to {
-		height:0%;
+		margin-top:-100px
 	}
     
  }
@@ -290,17 +290,17 @@ body.with-panel-right-reveal .panel-overlay {
  /* try this code! */
 
 .animation-search1 {
-	-webkit-animation: animation-search1 100s 5;
+	-webkit-animation: animation-search1 15s 5;
 }
 
 @-webkit-keyframes animation-search1 {
 
 	from {
-		height:0%;
+		margin-top:-100px;
 	}
 
 	to {
-		height:100%;
+		margin-top:0px;
 	}
     
  }
