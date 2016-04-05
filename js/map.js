@@ -54,24 +54,6 @@ document.addEventListener("deviceready", function() {
 		
 	},2000);
 
-
-            
-          
-	map.on(plugin.google.maps.event.CAMERA_CHANGE, function () {
-		
-		/*ONMOVE();
-		
-		setTimeout(function(){
-  			ONSTOP();
-		},7000);*/
-		
-    	});
-    	
-
-	map.on(plugin.google.maps.event.MAP_CLICK, function () {
-	
-			
-       });
        
        
 	setInterval(function(){ 
@@ -118,12 +100,6 @@ document.addEventListener("deviceready", function() {
 	//END NAVIGATOR ////////////////////////////////////////////////////////////////////////////  
 
 
-
-
-    	
-    	
-    	
-    
 
 });
 
