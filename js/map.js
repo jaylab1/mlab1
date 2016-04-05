@@ -12,12 +12,13 @@ document.addEventListener("deviceready", function() {
     //START NAVIGATOR ////////////////////////////////////////////////////////////////////////////   
     navigator.geolocation.getCurrentPosition(function (position) {
     	
-    	alert(location);
+    	
         
         var location = setPosition(position.coords.latitude, position.coords.longitude);
         
         var div = document.getElementById("map_canvas");
         
+        alert(location);
         
 	var map = plugin.google.maps.Map.getMap(div, {
             'controls': {
