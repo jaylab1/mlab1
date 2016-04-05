@@ -46,7 +46,7 @@ document.addEventListener("deviceready", function() {
         });
         
        
-	setTimeout(function(){
+	/*setTimeout(function(){
   			
             map.animateCamera({
                 'zoom': 14,
@@ -57,7 +57,7 @@ document.addEventListener("deviceready", function() {
             ONSTOP();
   			
   			
-	},2000);
+	},2000);*/
 
 
             
