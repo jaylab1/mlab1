@@ -93,7 +93,7 @@ body.with-panel-right-reveal .panel-overlay {
     margin-left:-15px;
     background-color:#E45641;
     border-bottom:1px dashed #666;
-    opacity:0.9;
+    opacity:0.8;
     
     
 }
@@ -107,7 +107,7 @@ body.with-panel-right-reveal .panel-overlay {
 
 .SEARCH span{
     
-    margin-left:60px;
+    margin-left:1px;
     
 }
 
