@@ -21,7 +21,6 @@ document.addEventListener("deviceready", function() {
         
 	var map = plugin.google.maps.Map.getMap(div,{
   		'backgroundColor': 'white',
-  		'mapType': plugin.google.maps.MapTypeId.HYBRID,
   		'controls': {
     			'myLocationButton': true,
   		},
@@ -43,9 +42,9 @@ document.addEventListener("deviceready", function() {
 	setTimeout(function(){
   			
             map.animateCamera({
-                'zoom': 14,
+                'zoom': 15,
                 'bearing': 0,
-                'duration': 5000 // 10 seconds
+                'duration': 4000 // 10 seconds
             }); 
             
             ONSTOP();
