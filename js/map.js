@@ -87,6 +87,7 @@ document.addEventListener("deviceready", function() {
   				$( '.ROUND' ).addClass( "animation-target" );
                 
   				$( '.SEARCH' ).addClass( "animation-search" );
+  				$( '.SEARCH' ).addClass( "animation-search-icon" );
   				
   				
   			}else{
@@ -96,10 +97,10 @@ document.addEventListener("deviceready", function() {
   				$( '.ROUND' ).addClass( "animation-target1" );
                 
   				$( '.SEARCH' ).removeClass( "animation-search" ); 
+  				$( '.SEARCH' ).removeClass( "animation-search-icon" ); 
   				 				
   				
-  		
-  				
+	
   			}
   			
   			var VALUE = camera.target.lat+camera.target.lng;
