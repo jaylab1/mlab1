@@ -55,7 +55,11 @@ body.with-panel-right-reveal .panel-overlay {
   }
 }
 
-
+#map_canvas i{
+    
+    padding:5px;
+    
+}
 
 .LOADER1{
     
@@ -82,6 +86,12 @@ body.with-panel-right-reveal .panel-overlay {
     background-color:white;
     border-bottom:1px dashed #666;
     opacity: 0.7;
+    
+}
+
+.SEARCH span{
+    
+    margin-left:60px;
     
 }
 
