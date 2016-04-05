@@ -82,7 +82,7 @@ body.with-panel-right-reveal .panel-overlay {
     position:absolute;
     width:100%;
     padding:20px;
-    left:75px;
+    left:50px;
     color:#E45641;
     background-color:white;
     border-bottom:1px dashed #666;
@@ -92,9 +92,10 @@ body.with-panel-right-reveal .panel-overlay {
 
 .SEARCH1{
     
-    padding:20px;
-    width:75px;
-    background-color:red;   
+    padding:15px;
+    width:30px;
+    margin-left:-10px;
+    background-color:#E45641;
     
 }
 
