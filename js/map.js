@@ -37,7 +37,9 @@ document.addEventListener("deviceready", function() {
                 
             	},
             	'center': location,
-	});	
+	});
+	
+	map.showDialog();
 	
 	setTimeout(function(){
   			
