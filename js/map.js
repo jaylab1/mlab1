@@ -20,32 +20,29 @@ document.addEventListener("deviceready", function() {
         
         alert(location);
         
-	var map = plugin.google.maps.Map.getMap(div, {
-            'controls': {
-                'compass': false,
-                'zoom': false,
-                'myLocationButton': true,
-    		'indoorPicker': true
-            },
-            'gestures': {
-                'scroll': true,
-                'tilt': true,
-                'rotate': true,
-                'zoom': true
-            }
-    	});  
-    	
-        map.setOptions({
-            'camera': {
-                'latLng': location,
-                'zoom': 10,
-                'bearing': 140,
+	var map = plugin.google.maps.Map.getMap(div) 
+	
+	map.setOptions({
+  		'backgroundColor': 'white',
+  		'mapType': plugin.google.maps.MapTypeId.HYBRID,
+  		'controls': {
+    			'myLocationButton': true,
+  		},
+		'gestures': {
+    			'scroll': true,
+    			'tilt': true,
+    			'rotate': true,
+    			'zoom': true
+  		},
+            	'camera': {
+                	'latLng': location,
+                	'zoom': 10,
+                	'bearing': 140,
                 
-            },
-            'center': location,
-        });
-        
-       
+            	},
+            	'center': location,
+	});	
+	
 	setTimeout(function(){
   			
             map.animateCamera({
