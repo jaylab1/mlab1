@@ -11,6 +11,8 @@ document.addEventListener("deviceready", function() {
         
     //START NAVIGATOR ////////////////////////////////////////////////////////////////////////////   
     navigator.geolocation.getCurrentPosition(function (position) {
+    	
+    	alert(location);
         
         var location = setPosition(position.coords.latitude, position.coords.longitude);
         
