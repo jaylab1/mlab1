@@ -39,7 +39,6 @@ document.addEventListener("deviceready", function() {
             	'center': location,
 	});
 	
-	map.showDialog();
 	
 	setTimeout(function(){
   			
@@ -47,7 +46,11 @@ document.addEventListener("deviceready", function() {
                 'zoom': 14,
                 'bearing': 0,
                 'duration': 4000 // 10 seconds
-            }); 
+            }, function() {
+
+  		setCenter(location);
+  		
+	    }); 
             
             ONSTOP();
   			
