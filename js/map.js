@@ -25,7 +25,7 @@ document.addEventListener("deviceready", function() {
                 'compass': false,
                 'zoom': false,
                 'myLocationButton': true,
-    			'indoorPicker': true
+    		'indoorPicker': true
             },
             'gestures': {
                 'scroll': true,
@@ -46,7 +46,7 @@ document.addEventListener("deviceready", function() {
         });
         
        
-	/*setTimeout(function(){
+	setTimeout(function(){
   			
             map.animateCamera({
                 'zoom': 14,
@@ -57,7 +57,7 @@ document.addEventListener("deviceready", function() {
             ONSTOP();
   			
   			
-	},2000);*/
+	},2000);
 
 
             
@@ -72,11 +72,7 @@ document.addEventListener("deviceready", function() {
 		
     	});
     	
-	map.on(plugin.google.maps.event.MAP_CLICK, function () {
-	
-		ONMOVE()	
-			
-       });
+
        
        
 	setInterval(function(){ 
