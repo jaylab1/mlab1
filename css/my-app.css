@@ -81,7 +81,8 @@ body.with-panel-right-reveal .panel-overlay {
     
     position:absolute;
     width:100%;
-    padding:17px;
+    padding:20px;
+    left:75px;
     color:#E45641;
     background-color:white;
     border-bottom:1px dashed #666;
