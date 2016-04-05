@@ -331,6 +331,26 @@ body.with-panel-right-reveal .panel-overlay {
     
  }
  
+ .animation-search-icon {
+	
+  	margin-left:-100px
+  	animation: animation-search-icon 1s  linear forwards;
+  	-webkit-animation: animation-search-icon 1s linear forwards; /* Safari and Chrome */
+  	
+}
+
+@-webkit-keyframes animation-search-icon {
+
+	from {
+		margin-left:-15px;
+	}
+
+	to {
+		margin-left:-100px
+	}
+    
+ }
+ 
  
  
  /* try this code! */
