@@ -92,13 +92,15 @@ body.with-panel-right-reveal .panel-overlay {
     width:23px;
     margin-left:-15px;
     background-color:#E45641;
+    border-bottom:1px dashed #666;
     opacity:0.9;
+    
     
 }
 
 .SEARCH1 i{
     
-    margin:0px 5px 5px -5px;
+    margin:0px 5px 5px -4px;
     color:white;
     
 }
