@@ -23,6 +23,7 @@ document.addEventListener("deviceready", function() {
   		'backgroundColor': 'white',
   		'controls': {
     			'myLocationButton': true,
+    			'compass': false,
   		},
 		'gestures': {
     			'scroll': true,
