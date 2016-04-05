@@ -89,8 +89,6 @@ document.addEventListener("deviceready", function() {
   				$( '.ROUND' ).addClass( "animation-target" );
                 
   				$( '.SEARCH' ).addClass( "animation-search" );
-                
-                setPadding('0px 0px 0px 0px');
   				
   				
   			}else{
@@ -101,7 +99,7 @@ document.addEventListener("deviceready", function() {
                 
   				$( '.SEARCH' ).removeClass( "animation-search" ); 
   				 				
-  				setPadding('30px 0px 0px 0px');
+  				
   		
   				
   			}
