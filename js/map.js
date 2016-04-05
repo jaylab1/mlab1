@@ -51,9 +51,29 @@ document.addEventListener("deviceready", function() {
                 'duration': 5000 // 10 seconds
             }); 
             
-		
+            ONSTOP();
+  			
+  			
 	},2000);
 
+
+            
+          
+	map.on(plugin.google.maps.event.CAMERA_CHANGE, function () {
+		
+		/*ONMOVE();
+		
+		setTimeout(function(){
+  			ONSTOP();
+		},7000);*/
+		
+    	});
+    	
+	map.on(plugin.google.maps.event.MAP_CLICK, function () {
+	
+		ONMOVE()	
+			
+       });
        
        
 	setInterval(function(){ 
@@ -67,18 +87,21 @@ document.addEventListener("deviceready", function() {
   				
   				$( '.ROUND' ).removeClass( "animation-target1" ); 
   				$( '.ROUND' ).addClass( "animation-target" );
+                
   				$( '.SEARCH' ).addClass( "animation-search" );
                 
-        
+                setPadding('0px 0px 0px 0px');
+  				
   				
   			}else{
   				
   				
   				$( '.ROUND' ).removeClass( "animation-target" ); 
   				$( '.ROUND' ).addClass( "animation-target1" );
+                
   				$( '.SEARCH' ).removeClass( "animation-search" ); 
   				 				
-  	
+  				setPadding('30px 0px 0px 0px');
   		
   				
   			}
@@ -101,6 +124,12 @@ document.addEventListener("deviceready", function() {
 
 
 
+
+    	
+    	
+    	
+    
+
 });
 
 //END DEVICE READY////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -115,3 +144,17 @@ function onLocationError( error_msg ) {
 }
 
 
+
+
+
+
+
+function ONSTOP(){
+	
+  $( ".PIN" ).animate({
+    opacity: 1
+  }, 500, function() {
+    // Animation complete.
+  });
+  
+}
