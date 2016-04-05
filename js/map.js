@@ -42,7 +42,7 @@ document.addEventListener("deviceready", function() {
 	setTimeout(function(){
   			
             map.animateCamera({
-                'zoom': 15,
+                'zoom': 14,
                 'bearing': 0,
                 'duration': 4000 // 10 seconds
             }); 
