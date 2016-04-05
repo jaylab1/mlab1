@@ -18,9 +18,8 @@ document.addEventListener("deviceready", function() {
         
         var div = document.getElementById("map_canvas");
         
-        alert(location);
         
-	var map = plugin.google.maps.Map.getMap(div) 
+	var map = plugin.google.maps.Map.getMap(div);
 	
 	map.setOptions({
   		'backgroundColor': 'white',
