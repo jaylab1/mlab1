@@ -89,8 +89,8 @@ body.with-panel-right-reveal .panel-overlay {
 .SEARCH1{
     
     padding:12px;
-    width:20px;
-    margin-left:-14px;
+    width:22px;
+    margin-left:-15px;
     background-color:#E45641;
     opacity:0.9;
     
@@ -98,7 +98,7 @@ body.with-panel-right-reveal .panel-overlay {
 
 .SEARCH1 i{
     
-    margin:2px;
+    margin:0px 5px 5px 5px;
     color:white;
     
 }
