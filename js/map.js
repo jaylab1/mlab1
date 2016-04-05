@@ -51,9 +51,7 @@ document.addEventListener("deviceready", function() {
                 'duration': 5000 // 10 seconds
             }); 
             
-            ONSTOP();
-  			
-  			
+		
 	},2000);
 
 
@@ -69,9 +67,9 @@ document.addEventListener("deviceready", function() {
 		
     	});
     	
+
 	map.on(plugin.google.maps.event.MAP_CLICK, function () {
 	
-		ONMOVE()	
 			
        });
        
@@ -87,7 +85,6 @@ document.addEventListener("deviceready", function() {
   				
   				$( '.ROUND' ).removeClass( "animation-target1" ); 
   				$( '.ROUND' ).addClass( "animation-target" );
-                
   				$( '.SEARCH' ).addClass( "animation-search" );
                 
         
@@ -97,7 +94,6 @@ document.addEventListener("deviceready", function() {
   				
   				$( '.ROUND' ).removeClass( "animation-target" ); 
   				$( '.ROUND' ).addClass( "animation-target1" );
-                
   				$( '.SEARCH' ).removeClass( "animation-search" ); 
   				 				
   	
@@ -143,17 +139,3 @@ function onLocationError( error_msg ) {
 }
 
 
-
-
-
-
-
-function ONSTOP(){
-	
-  $( ".PIN" ).animate({
-    opacity: 1
-  }, 500, function() {
-    // Animation complete.
-  });
-  
-}
