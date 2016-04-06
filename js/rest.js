@@ -62,6 +62,7 @@ function SENDget(KEY,PARAMETERS,animate='YES'){
 
 function GETgeoaddress(geocode){
     
+    alert('start');
     
     var DATA = SENDget(
     
