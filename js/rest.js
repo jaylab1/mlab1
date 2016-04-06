@@ -27,7 +27,6 @@ function LOADER(animate,status){
 
 function SENDget(KEY,PARAMETERS,animate='YES'){
     
-        var DATAS; 
     
         LOADER(animate,'IN');
     
@@ -40,9 +39,10 @@ function SENDget(KEY,PARAMETERS,animate='YES'){
             success     :       function(DATA){
 
                     LOADER(animate,'OUT'); 
-                    alert(DATA.status);
-                    
-                    DATAS = DATA;
+
+
+                    //CALLS
+                    GETgeoaddress(KEY,DATA)
                 
                                 },
             error       :       function(jqXHR, textStatus, errorThrown) {
@@ -55,25 +55,13 @@ function SENDget(KEY,PARAMETERS,animate='YES'){
 
        });  
        
-return DATAS;  
 }
 
 
 //
 
-function GETgeoaddress(geocode){
+function GETgeoaddress(KEY,DATA){
     
-    
-    var DATA = SENDget(
-    
-            'get-geoaddress',
-            'geocode='+geocode,
-            'NO'
-            
-    );
-    
-    alert(DATA.result);
-    
-    $("#INaddress").html(DATA.result);
-    
+    if (KEY == 'get-geoaddress')
+        $("#INaddress").html(DATA.result);
 }
