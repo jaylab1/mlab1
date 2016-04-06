@@ -62,6 +62,10 @@ function SENDget(KEY,PARAMETERS,animate='YES'){
 
 function GETgeoaddress(KEY,DATA){
     
-    if (KEY == 'get-geoaddress')
-        $("#INaddress").html(DATA.result);
+    if (KEY == 'get-geoaddress'){
+		
+			$("#INaddress").html(DATA.result);
+			 //essential for fetching address
+  			localStorage.setItem('FETCHlocation','YES');
+	}
 }

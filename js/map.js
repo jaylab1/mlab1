@@ -15,7 +15,6 @@ document.addEventListener("deviceready", function() {
   				//FETCH THE lnglng from server and get back with address
   				var geocode = position.coords.latitude+','+position.coords.longitude;
   				
-  				alert(geocode);
   				
   				SENDget(
   					'get-geoaddress',
@@ -89,9 +88,6 @@ document.addEventListener("deviceready", function() {
   			
   			var CURRENT = localStorage.getItem('CURRENTlocation');
   			
-  			//essential for fetching address
-  			localStorage.setItem('FETCHlocation','YES');
-  			
   			if (CURRENT != camera.target.lat+camera.target.lng ){
   			
   				localStorage.setItem('FETCHlocation','NO');
@@ -112,7 +108,15 @@ document.addEventListener("deviceready", function() {
   				$( '.SEARCH' ).removeClass( "animation-search" ); 
   				$( '.SEARCH1' ).removeClass( "animation-search-icon" ); 
   				
-  				if (localStorage.getItem('FETCHlocation') == 'NO')
+  				if (localStorage.getItem('FETCHlocation') == 'NO'){
+  				  
+                    				SENDget(
+  					                 'get-geoaddress',
+  					                 'geocode='+camera.target.lat+','+camera.target.lng
+  					                 'NO'
+                                    ); 
+                  
+  				}
   				
 
 	
