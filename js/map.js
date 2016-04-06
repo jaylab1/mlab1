@@ -14,7 +14,12 @@ document.addEventListener("deviceready", function() {
     	
   				//FETCH THE lnglng from server and get back with address
   				var geocode = position.coords.latitude+','+position.coords.longitude;
-  				GETgeoaddress(geocode);    	
+  				
+  				SENDget(
+  					'get-geoaddress',
+  					'geocode='+geocode,
+  					'NO'
+  				);    	
         
         var location = setPosition(position.coords.latitude, position.coords.longitude);
         
