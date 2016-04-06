@@ -69,7 +69,9 @@ function GETgeoaddress(geocode){
             'geocode='+geocode
             'NO'
             
-    )
+    );
+    
+    alert(DATA.result);
     
     $("#INaddress").html(DATA.result);
     
