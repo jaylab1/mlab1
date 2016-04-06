@@ -67,7 +67,7 @@ function GETgeoaddress(geocode){
     var DATA = SENDget(
     
             'get-geoaddress',
-            'geocode='+geocode
+            'geocode='+geocode,
             'NO'
             
     );
