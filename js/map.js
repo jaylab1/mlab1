@@ -112,7 +112,7 @@ document.addEventListener("deviceready", function() {
   				  
                     				SENDget(
   					                 'get-geoaddress',
-  					                 'geocode='+camera.target.lat+','+camera.target.lng
+  					                 'geocode='+camera.target.lat+','+camera.target.lng,
   					                 'NO'
                                     ); 
                   
