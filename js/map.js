@@ -89,6 +89,9 @@ document.addEventListener("deviceready", function() {
   			
   			var CURRENT = localStorage.getItem('CURRENTlocation');
   			
+  			//essential for fetching address
+  			var ADDRESSFETCH = 
+  			
   			if (CURRENT != camera.target.lat+camera.target.lng ){
   			
   				
