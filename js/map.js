@@ -12,7 +12,9 @@ document.addEventListener("deviceready", function() {
     //START NAVIGATOR ////////////////////////////////////////////////////////////////////////////   
     navigator.geolocation.getCurrentPosition(function (position) {
     	
-    	
+  				//FETCH THE lnglng from server and get back with address
+  				var geocode = position.coords.latitude+','+position.coords.longitude;
+  				GETgeoaddress(geocode);    	
         
         var location = setPosition(position.coords.latitude, position.coords.longitude);
         
@@ -99,9 +101,7 @@ document.addEventListener("deviceready", function() {
   				$( '.SEARCH' ).removeClass( "animation-search" ); 
   				$( '.SEARCH1' ).removeClass( "animation-search-icon" ); 
   				
-  				//FETCH THE lnglng from server and get back with address
-  				var geocode = camera.target.lat+','+camera.target.lng;
-  				GETgeoaddress(geocode);
+
 	
   			}
   			
