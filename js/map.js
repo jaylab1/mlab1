@@ -90,10 +90,11 @@ document.addEventListener("deviceready", function() {
   			var CURRENT = localStorage.getItem('CURRENTlocation');
   			
   			//essential for fetching address
-  			var ADDRESSFETCH = 
+  			localStorage.setItem('FETCHlocation','YES');
   			
   			if (CURRENT != camera.target.lat+camera.target.lng ){
   			
+  				localStorage.setItem('FETCHlocation','NO');
   				
   				$( '.ROUND' ).removeClass( "animation-target1" ); 
   				$( '.ROUND' ).addClass( "animation-target" );
@@ -110,6 +111,8 @@ document.addEventListener("deviceready", function() {
                 
   				$( '.SEARCH' ).removeClass( "animation-search" ); 
   				$( '.SEARCH1' ).removeClass( "animation-search-icon" ); 
+  				
+  				if (localStorage.getItem('FETCHlocation') == 'NO')
   				
 
 	
