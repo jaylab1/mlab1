@@ -25,7 +25,7 @@ function LOADER(animate,status){
     
 }
 
-function SENDget(PARAMETERS,animate='YES'){
+function SENDget(KEY,PARAMETERS,animate='YES'){
     
     
         LOADER(animate,'IN');
@@ -35,26 +35,42 @@ function SENDget(PARAMETERS,animate='YES'){
             type        :       "GET",
             dataType    :       "json", // Choosing a JSON datatype
             url         :       PREFIX('gdsk3429efdFGRgedo4434939gdsgdkfhnpdksqi943'),
-            data        :       PARAMETERS,
+            data        :       KEY+'=true&'+PARAMETERS,
             success     :       function(DATA){
 
                     LOADER(animate,'OUT'); 
                     alert(DATA.status)
+                    
+                    return DATA;
                 
                                 },
             error       :       function(jqXHR, textStatus, errorThrown) {
                 
                     LOADER(animate,'OUT'); 
-                     ERROR(jqXHR, textStatus, errorThrown)
+                    ERROR(jqXHR, textStatus, errorThrown)
 
             }                     
                              
 
        });  
        
-       
+   
+}
+
+
+//
+
+function GETgeoaddress(geocode){
     
     
+    var DATA = SENDget(
     
+            'get-geoaddress',
+            'geocode='+geocode
+            'NO'
+            
+    )
+    
+    $("#INaddress").html(DATA.result);
     
 }
