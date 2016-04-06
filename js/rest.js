@@ -27,6 +27,7 @@ function LOADER(animate,status){
 
 function SENDget(KEY,PARAMETERS,animate='YES'){
     
+        var DATAS; 
     
         LOADER(animate,'IN');
     
@@ -39,9 +40,9 @@ function SENDget(KEY,PARAMETERS,animate='YES'){
             success     :       function(DATA){
 
                     LOADER(animate,'OUT'); 
-                    alert(DATA.status)
+                    alert(DATA.status);
                     
-                    return DATA;
+                    DATAS = DATA;
                 
                                 },
             error       :       function(jqXHR, textStatus, errorThrown) {
@@ -54,7 +55,7 @@ function SENDget(KEY,PARAMETERS,animate='YES'){
 
        });  
        
-   
+return DATAS;  
 }
 
 
@@ -62,7 +63,6 @@ function SENDget(KEY,PARAMETERS,animate='YES'){
 
 function GETgeoaddress(geocode){
     
-    alert('start');
     
     var DATA = SENDget(
     
