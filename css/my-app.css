@@ -77,7 +77,7 @@ body.with-panel-right-reveal .panel-overlay {
     
     position:absolute;
     width:100%;
-    padding:20px;
+    padding:20px 20px 20px 1px;
     left:50px;
     color:#E45641;
     background-color:white;
@@ -107,7 +107,7 @@ body.with-panel-right-reveal .panel-overlay {
 
 .SEARCH span{
     
-    margin-left:1px;
+    font-weight:bold;
     
 }
 
