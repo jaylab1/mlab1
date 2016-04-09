@@ -71,10 +71,7 @@ document.addEventListener("deviceready", function() {
   		
   			localStorage.setItem('MARKER1',marker.get("position"));
   			var result = [33.8772144,35.5193908];
-  			var past   = localStorage.getItem('MARKER1');
-  			var res    = past.split(",");
-  			var position = [res[0],res[1]];
-            		transition(position,result,marker);
+            		transition(result);
             		//var latlng = new plugin.google.maps.LatLng(result[0], result[1]);
         		//marker.setPosition(latlng);
   			
@@ -222,15 +219,24 @@ function GETcoord(lat,long,mode='0'){
     var i = 0;
     var deltaLat;
     var deltaLng;
-    function transition(position,result,marker){
+    function transition(result){
         i = 0;
+       
+    	var past     = localStorage.getItem('MARKER1');
+  	var res      = past.split(",");
+  	var position = [res[0],res[1]];
         
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
         moveMarker(position,marker);
     }
     
-    function moveMarker(position,marker){
+    function moveMarker(){
+    	
+    	var past     = localStorage.getItem('MARKER1');
+  	var res      = past.split(",");
+  	var position = [res[0],res[1]];
+    	
         position[0] += deltaLat;
         position[1] += deltaLng;
         
