@@ -69,13 +69,17 @@ document.addEventListener("deviceready", function() {
        			 'rotation': 90,
     	      });
     	      
-    	      alert('test');
   			
   			
 	},2000);
 
 
-
+	var evtName = plugin.google.maps.event.MAP_LONG_CLICK;
+	
+		map.on(evtName, function(marker) {
+			
+  			alert(marker.getPosition());
+		});
 
   
   //END CAMERA READY 
