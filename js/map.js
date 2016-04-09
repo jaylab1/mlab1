@@ -68,6 +68,8 @@ document.addEventListener("deviceready", function() {
        			 'icon': CARicon(),
        			 'rotation': 90,
     	      });
+    	      
+    	      alert(marker.getPosition());
   			
   			
 	},2000);
@@ -134,7 +136,7 @@ document.addEventListener("deviceready", function() {
 	
 	var evtName = plugin.google.maps.event.MAP_LONG_CLICK;
 	map.on(evtName, function() {
-			    alert(marker.getPosition());
+			    
         	
 	});
        
