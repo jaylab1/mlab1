@@ -61,15 +61,17 @@ document.addEventListener("deviceready", function() {
   		
 	    }); 
             
-            ONSTOP()
+            ONSTOP();
+          
+              map.addMarker({
+       			'position': new plugin.google.maps.LatLng(33.8730011,35.5179532),
+    	      });
   			
   			
 	},2000);
 
 
-    map.addMarker({
-       'position': new plugin.google.maps.LatLng(33.8730011,35.5179532),
-    });
+
 
   
   //END CAMERA READY 
