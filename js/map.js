@@ -138,7 +138,7 @@ document.addEventListener("deviceready", function() {
 
 	function onMapClicked(latLng) {
   		var marker = this;
-  		alert(marker.get("position"));
+  		alert(marker.getPosition());
 	}
        
        
