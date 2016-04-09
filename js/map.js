@@ -71,7 +71,7 @@ document.addEventListener("deviceready", function() {
   map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
 
 
-    var GOOGLE = new plugin.google.maps.LatLng(33.8730011,35.5179532);
+   /* var GOOGLE = new plugin.google.maps.LatLng(33.8730011,35.5179532);
     
     map.addMarker({
       'position': GOOGLE,
@@ -82,7 +82,7 @@ document.addEventListener("deviceready", function() {
 
       //marker.showInfoWindow();
 
-    });
+    });*/
 
   });
   
