@@ -67,19 +67,13 @@ document.addEventListener("deviceready", function() {
 	},2000);*/
 
 
- //HERE EMBED ALL EVENTS WHEN MAP IS READY --->
-  map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
-
-    
     map.addMarker({
        'position': new plugin.google.maps.LatLng(33.8730011,35.5179532),
-       'title' : "Hello GoogleMap for Cordova!",
        'icon'  : {
     		'url': 'www/img/pinhail-car-small.png'
    	}
     });
 
-  });
   
   //END CAMERA READY 
 
