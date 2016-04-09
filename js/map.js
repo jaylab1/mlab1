@@ -132,7 +132,12 @@ document.addEventListener("deviceready", function() {
 	}, 2000);  
 	
 	
+	map.addEventListener(plugin.google.maps.event.MAP_CLICK, onMapClicked);
 
+	function onMapClicked(latLng) {
+  		var map = this;
+  		alert(latLng. toUrlValue());
+	}
        
        
 
