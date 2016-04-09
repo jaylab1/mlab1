@@ -70,19 +70,12 @@ document.addEventListener("deviceready", function() {
  //HERE EMBED ALL EVENTS WHEN MAP IS READY --->
   map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
 
-
-   /* var GOOGLE = new plugin.google.maps.LatLng(33.8730011,35.5179532);
     
     map.addMarker({
-      'position': GOOGLE,
+      'position': new plugin.google.maps.LatLng(33.8730011,35.5179532),
       'icon':  	"pinhail-car-small.png",
       'title': "Hello GoogleMap for Cordova!",
-      'rotation':40
-    }, function(marker) {
-
-      //marker.showInfoWindow();
-
-    });*/
+    };
 
   });
   
