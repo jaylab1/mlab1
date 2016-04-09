@@ -233,14 +233,21 @@ function GETcoord(lat,long,mode='0'){
     
     function moveMarker(){
     	
+    	alert("1");
+    	
     	var past     = localStorage.getItem('MARKER1');
   	var res      = past.split(",");
   	var position = [res[0],res[1]];
+  	
+  	alert(position);
     	
         position[0] += deltaLat;
         position[1] += deltaLng;
         
         var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
+        
+        alert(latlng);
+        
         marker.setPosition(latlng);
         
         	alert(latlng);
