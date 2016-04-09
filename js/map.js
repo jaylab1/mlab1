@@ -248,7 +248,7 @@ function GETcoord(lat,long,mode='0'){
         
         alert(latlng);
         
-        marker.setPosition(latlng);
+        //marker.setPosition(latlng);
         
         	alert(latlng);
         
