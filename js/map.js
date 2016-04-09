@@ -69,7 +69,7 @@ document.addEventListener("deviceready", function() {
        			 'rotation': 90,
     	      });
     	      
-    	      alert(marker.getPosition());
+    	      alert('test');
   			
   			
 	},2000);
@@ -133,12 +133,7 @@ document.addEventListener("deviceready", function() {
 	}, 2000);  
 	
 	
-	
-	var evtName = plugin.google.maps.event.MAP_LONG_CLICK;
-	map.on(evtName, function() {
-			    
-        	
-	});
+
        
        
 
