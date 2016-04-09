@@ -74,7 +74,7 @@ document.addEventListener("deviceready", function() {
   			var past   = localStorage.getItem('MARKER1');
   			var res    = past.split(",");
   			var position = [res[0],res[1]];
-            		transition(position,result);
+            		transition(position,result,marker);
   			
 	      });
 	      
@@ -220,15 +220,15 @@ function GETcoord(lat,long,mode='0'){
     var i = 0;
     var deltaLat;
     var deltaLng;
-    function transition(position,result){
+    function transition(position,result,marker){
         i = 0;
         
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
-        moveMarker(position);
+        moveMarker(position,marker);
     }
     
-    function moveMarker(position){
+    function moveMarker(position,marker){
         position[0] += deltaLat;
         position[1] += deltaLng;
         
