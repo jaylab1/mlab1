@@ -219,10 +219,10 @@ function GETcoord(lat,long,mode='0'){
         i = 0;
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
-        moveMarker();
+        moveMarker(position);
     }
     
-    function moveMarker(){
+    function moveMarker(position){
         position[0] += deltaLat;
         position[1] += deltaLng;
         var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
