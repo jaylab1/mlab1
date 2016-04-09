@@ -64,7 +64,7 @@ document.addEventListener("deviceready", function() {
             ONSTOP();
           
               map.addMarker({
-       			'position': new plugin.google.maps.LatLng(33.8730011,35.5179532),
+       			'position': GETcoord('33.8730011','35.5179532'),
        			 'icon': CARicon(),
        			 'rotation': 90,
     	      });
@@ -178,3 +178,43 @@ function CARicon(){
 	
 	
 }
+
+
+function GETcoord(lat,long,mode='0'){
+	
+	if (mode==0)
+	  return new plugin.google.maps.LatLng(lat,long);
+       else
+          return [lat,long];
+	
+}
+
+
+
+    //MOVING ICON;
+    var numDeltas = 100;
+    var delay = 10; //milliseconds
+    var i = 0;
+    var deltaLat;
+    var deltaLng;
+    function transition(result){
+        i = 0;
+        deltaLat = (result[0] - position[0])/numDeltas;
+        deltaLng = (result[1] - position[1])/numDeltas;
+        moveMarker();
+    }
+    
+    function moveMarker(){
+        position[0] += deltaLat;
+        position[1] += deltaLng;
+        var latlng = new google.maps.LatLng(position[0], position[1]);
+        marker.setPosition(latlng);
+        if(i!=numDeltas){
+            i++;
+            setTimeout(moveMarker, delay);
+        }else{
+            
+            alert("finished");
+            
+        }
+    }
