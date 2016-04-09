@@ -140,7 +140,9 @@ document.addEventListener("deviceready", function() {
 
 	function onMapClicked(latLng) {
   		
-  			alert(localStorage.getItem('MARKER1'))
+  			var result = [33.8772144,35.5193908];
+  			var position = [localStorage.getItem('MARKER1')];
+            		transition(position,result);
 	}
        
        
@@ -205,12 +207,15 @@ function GETcoord(lat,long,mode='0'){
 
 
     //MOVING ICON;
+    
+    
+    
     var numDeltas = 100;
     var delay = 10; //milliseconds
     var i = 0;
     var deltaLat;
     var deltaLng;
-    function transition(result){
+    function transition(position,result){
         i = 0;
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
