@@ -74,9 +74,9 @@ document.addEventListener("deviceready", function() {
   			var past   = localStorage.getItem('MARKER1');
   			var res    = past.split(",");
   			var position = [res[0],res[1]];
-            		//transition(position,result,marker);
-            		var latlng = new plugin.google.maps.LatLng(result[0], result[1]);
-        		marker.setPosition(latlng);
+            		transition(position,result,marker);
+            		//var latlng = new plugin.google.maps.LatLng(result[0], result[1]);
+        		//marker.setPosition(latlng);
   			
 	      });
 	      
@@ -235,7 +235,7 @@ function GETcoord(lat,long,mode='0'){
         position[1] += deltaLng;
         
         var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
-        marker.setPosition(LatLng);
+        marker.setPosition(latlng);
         
         	alert(latlng);
         
