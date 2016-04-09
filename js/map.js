@@ -67,7 +67,9 @@ document.addEventListener("deviceready", function() {
        			'position': GETcoord('33.8730011','35.5179532'),
        			 'icon': CARicon(),
        			 'rotation': 90,
-    	      });
+    	      }, function(marker) {
+  			alert(marker.get("position"));
+	      });
     	      
   			
   			
@@ -136,7 +138,6 @@ document.addEventListener("deviceready", function() {
 
 	function onMapClicked(latLng) {
   		var map = this;
-  		alert(latLng. toUrlValue());
 	}
        
        
