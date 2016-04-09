@@ -68,7 +68,7 @@ document.addEventListener("deviceready", function() {
        			 'icon': CARicon(),
        			 'rotation': 90,
     	      }, function(marker) {
-  			alert(marker.get("position"));
+  			
 	      });
     	      
   			
@@ -137,7 +137,8 @@ document.addEventListener("deviceready", function() {
 	map.addEventListener(plugin.google.maps.event.MAP_CLICK, onMapClicked);
 
 	function onMapClicked(latLng) {
-  		var map = this;
+  		var marker = this;
+  		alert(marker.get("position"));
 	}
        
        
