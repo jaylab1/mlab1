@@ -78,7 +78,7 @@ document.addEventListener("deviceready", function() {
 	
 		map.on(evtName, function(marker) {
 			
-  			alert(marker.getPosition());
+  			alert(marker.getPosition().lat());
 		});
 
   
