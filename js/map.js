@@ -63,17 +63,22 @@ document.addEventListener("deviceready", function() {
             
             ONSTOP();
           
-              marker = map.addMarker({
+              map.addMarker({
        			'position': GETcoord('33.8730011','35.5179532'),
        			 'icon': CARicon(),
        			 'rotation': 90,
     	      }, function(marker) {
   		
   			localStorage.setItem('MARKER1',marker.get("position"));
+  			var result = [33.8772144,35.5193908];
+  			var past   = localStorage.getItem('MARKER1');
+  			var res    = past.split(",");
+  			var position = [res[0],res[1]];
+            		transition(position,result);
   			
 	      });
 	      
-	      alert(marker);
+	     // alert(marker);
     	      
   			
   			
@@ -142,11 +147,7 @@ document.addEventListener("deviceready", function() {
 
 	function onMapClicked(marker) {
   		
-  			var result = [33.8772144,35.5193908];
-  			var past   = localStorage.getItem('MARKER1');
-  			var res    = past.split(",");
-  			var position = [res[0],res[1]];
-            		transition(position,result);
+
 	}
        
        
