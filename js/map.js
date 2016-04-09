@@ -67,21 +67,28 @@ document.addEventListener("deviceready", function() {
 	},2000);
 
 
-            
-          
-	map.on(plugin.google.maps.event.CAMERA_CHANGE, function () {
-		
-		/*ONMOVE();
-		
-		setTimeout(function(){
-  			ONSTOP();
-		},7000);*/
-		
-    	});
-    	
+ //HERE EMBED ALL EVENTS WHEN MAP IS READY --->
+  map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
 
-       
-       
+
+    var GOOGLE = new plugin.google.maps.LatLng(33.8730011,35.5179532);
+    
+    map.addMarker({
+      'position': GOOGLE,
+      'icon':  	"pinhail-car-small.png",
+      'title': "Hello GoogleMap for Cordova!",
+      'rotation':40
+    }, function(marker) {
+
+      //marker.showInfoWindow();
+
+    });
+
+  });
+  
+  //END CAMERA READY 
+
+
 	setInterval(function(){ 
 		
 		map.getCameraPosition(function(camera) {
