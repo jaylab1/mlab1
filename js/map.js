@@ -128,7 +128,17 @@ document.addEventListener("deviceready", function() {
  
  				
  
-	}, 2000);       
+	}, 2000);  
+	
+	
+	
+	var evtName = plugin.google.maps.event.MAP_LONG_CLICK;
+	map.on(evtName, function() {
+		
+		            var result = [33.8772144,35.5193908];
+            		    transition(result);
+        	
+	});
        
        
 
@@ -207,8 +217,8 @@ function GETcoord(lat,long,mode='0'){
     function moveMarker(){
         position[0] += deltaLat;
         position[1] += deltaLng;
-        var latlng = new google.maps.LatLng(position[0], position[1]);
-        marker.setPosition(latlng);
+        var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
+        marker.setPosition(LatLng)
         if(i!=numDeltas){
             i++;
             setTimeout(moveMarker, delay);
