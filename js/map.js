@@ -138,7 +138,7 @@ document.addEventListener("deviceready", function() {
 	
 	map.addEventListener(plugin.google.maps.event.MAP_CLICK, onMapClicked);
 
-	function onMapClicked(latLng) {
+	function onMapClicked(marker) {
   		
   			var result = [33.8772144,35.5193908];
   			var past   = localStorage.getItem('MARKER1');
