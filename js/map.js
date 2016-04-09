@@ -141,7 +141,9 @@ document.addEventListener("deviceready", function() {
 	function onMapClicked(latLng) {
   		
   			var result = [33.8772144,35.5193908];
-  			var position = [localStorage.getItem('MARKER1')];
+  			var past   = localStorage.getItem('MARKER1');
+  			var res    = past.split(",");
+  			var position = [res[0],res[1]];
             		transition(position,result);
 	}
        
