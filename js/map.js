@@ -63,7 +63,7 @@ document.addEventListener("deviceready", function() {
             
             ONSTOP();
           
-              map.addMarker({
+              marker = map.addMarker({
        			'position': GETcoord('33.8730011','35.5179532'),
        			 'icon': CARicon(),
        			 'rotation': 90,
