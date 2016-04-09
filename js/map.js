@@ -72,9 +72,8 @@ document.addEventListener("deviceready", function() {
 
     
     map.addMarker({
-      'latLng': new plugin.google.maps.LatLng(33.8730011,35.5179532),
-      'icon'  :  	"pinhail-car-small.png",
-      'title' : "Hello GoogleMap for Cordova!",
+       'position': new plugin.google.maps.LatLng(33.8730011,35.5179532),
+       'title' : "Hello GoogleMap for Cordova!",
     });
 
   });
