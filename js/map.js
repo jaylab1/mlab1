@@ -64,7 +64,7 @@ document.addEventListener("deviceready", function() {
             ONSTOP()
   			
   			
-	},2000);*/
+	},2000);
 
 
     map.addMarker({
