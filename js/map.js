@@ -74,7 +74,7 @@ document.addEventListener("deviceready", function() {
 	},2000);
 
 
-	alert(marker.getPosition().lat());
+	
 
   
   //END CAMERA READY 
