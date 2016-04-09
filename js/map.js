@@ -217,6 +217,9 @@ function GETcoord(lat,long,mode='0'){
     var deltaLng;
     function transition(position,result){
         i = 0;
+        
+        	alert(position[0]);
+        
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
         moveMarker(position);
