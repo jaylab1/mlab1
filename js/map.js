@@ -220,9 +220,6 @@ function GETcoord(lat,long,mode='0'){
     function transition(position,result){
         i = 0;
         
-        	alert(result[0]);
-        	alert(deltaLat);
-        
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
         moveMarker(position);
@@ -233,10 +230,10 @@ function GETcoord(lat,long,mode='0'){
         position[1] += deltaLng;
         
         var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
+        marker.setPosition(LatLng);
         
         	alert(latlng);
         
-        marker.setPosition(LatLng)
         if(i!=numDeltas){
             i++;
             setTimeout(moveMarker, delay);
