@@ -135,8 +135,6 @@ document.addEventListener("deviceready", function() {
 	var evtName = plugin.google.maps.event.MAP_LONG_CLICK;
 	map.on(evtName, function() {
 			    alert(marker.getPosition());
-		            var result = [33.8772144,35.5193908];
-            		    transition(result);
         	
 	});
        
