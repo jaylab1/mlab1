@@ -44,7 +44,7 @@ function SENDget1(KEY,PARAMETERS){
             data        :       KEY+'=true&'+PARAMETERS,
             success     :       function(DATA){
 
-			alert(DATA);
+			alert(JSON.stringify(DATA));
                 
                                 },
             error       :       function(jqXHR, textStatus, errorThrown) {
