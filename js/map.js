@@ -240,6 +240,8 @@ function GETcoord(lat,long,mode='0'){
         
         marker.setPosition(latlng);
         
+        	alert(latlng);
+        
         if(i!=numDeltas){
             i++;
             
