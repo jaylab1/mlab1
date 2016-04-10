@@ -229,17 +229,16 @@ function GETcoord(lat,long,mode='0'){
        
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
-        moveMarker();
+        moveMarker(position);
     }
     
-    function moveMarker(){
-    
-        alert(position);
+    function moveMarker(position){
+   
        
         position[0] += deltaLat;
         position[1] += deltaLng;
         
-
+	        alert(position);
         
         var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
         
@@ -251,7 +250,12 @@ function GETcoord(lat,long,mode='0'){
         
         if(i!=numDeltas){
             i++;
-            setTimeout(moveMarker, delay);
+            
+            setTimeout(function() {
+    			moveMarker(position);
+	    },delay)
+            
+            
         }else{
             
             alert("finished");
