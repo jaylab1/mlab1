@@ -233,6 +233,8 @@ function GETcoord(lat,long,mode='0'){
     function moveMarker(position,marker){
    
    	alert(position[0]);
+   	
+   	alert("minus="+deltaLat);
        
         position[0] += deltaLat;
         position[1] += deltaLng;
@@ -240,6 +242,8 @@ function GETcoord(lat,long,mode='0'){
         alert(position[0]);
         
         var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
+        
+        alert("afterlag="+position[0]);
         
         marker.setPosition(latlng);
         
