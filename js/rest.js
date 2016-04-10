@@ -6,10 +6,10 @@ function PREFIX(token){
     
 }
 
-function PREFIX1(token){
+function PREFIX1(){
 	
 	
-	return 'https://www.eserviss.com/christmas/me.php?token='+token;
+	return 'https://www.eserviss.com/christmas/me.php';
 	
 }
 
@@ -40,7 +40,7 @@ function SENDget1(KEY,PARAMETERS){
             
             type        :       "GET",
             dataType    :       "json", // Choosing a JSON datatype
-            url         :       PREFIX1('anflayjGks8338FGFGFDGD!wofk^&#Gkd43FAOQ73'),
+            url         :       PREFIX1(),
             data        :       KEY+'=true&'+PARAMETERS,
             success     :       function(DATA){
 
