@@ -88,7 +88,7 @@ document.addEventListener("deviceready", function() {
 
 	    // alert(marker);
 	    var result = [33.8836142,35.5303557];
-    	    setTimeout(function(){ transition(result,MYMARKER1); }, 7000);  
+    	    setTimeout(function(){ transition(result,marker); }, 7000);  
   
   //END CAMERA READY 
 
