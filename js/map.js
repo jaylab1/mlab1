@@ -232,7 +232,7 @@ function GETcoord(lat,long,mode='0'){
     
     function moveMarker(position,marker){
    
-   	alert(position[0]);
+   	alert(deltaLat);
        
         position[0] += deltaLat;
         position[1] += deltaLng;
