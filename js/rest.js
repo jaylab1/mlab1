@@ -6,6 +6,13 @@ function PREFIX(token){
     
 }
 
+function PREFIX1(token){
+	
+	
+	return 'https://www.eserviss.com/christmas/me.php?token='+token;
+	
+}
+
 
 function ERROR(jqXHR, textStatus, errorThrown){
     
@@ -23,6 +30,33 @@ function LOADER(animate,status){
         
     }
     
+}
+
+
+function SENDget1(KEY,PARAMETERS){
+    
+    
+        $.ajax({
+            
+            type        :       "GET",
+            dataType    :       "json", // Choosing a JSON datatype
+            url         :       PREFIX1('anflayjGks8338FGFGFDGD!wofk^&#Gkd43FAOQ73'),
+            data        :       KEY+'=true&'+PARAMETERS,
+            success     :       function(DATA){
+
+			alert(DATA);
+                
+                                },
+            error       :       function(jqXHR, textStatus, errorThrown) {
+                
+                    LOADER(animate,'OUT'); 
+                    ERROR(jqXHR, textStatus, errorThrown)
+
+            }                     
+                             
+
+       });  
+       
 }
 
 function SENDget(KEY,PARAMETERS,animate='YES'){
