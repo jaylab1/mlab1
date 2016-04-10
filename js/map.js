@@ -76,8 +76,7 @@ document.addEventListener("deviceready", function() {
   				var res      = past.split(",");
   				var position = [res[0],res[1]];
             			transition(result);
-            		//var latlng = new plugin.google.maps.LatLng(result[0], result[1]);
-        		//marker.setPosition(latlng);
+
   			
 	      });
 	      
