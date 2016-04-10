@@ -70,7 +70,9 @@ document.addEventListener("deviceready", function() {
     	      }, function(marker) {
   		
   			localStorage.setItem('MARKER1',marker.get("position"));
-  			
+  				    // alert(marker);
+	    		var result = [33.8836142,35.5303557];
+    	    		setTimeout(function(){ transition(result,marker); }, 7000);  
   			
 	      });
 	      
@@ -80,9 +82,7 @@ document.addEventListener("deviceready", function() {
 	},2000);
 
 
-	    // alert(marker);
-	    var result = [33.8836142,35.5303557];
-    	    setTimeout(function(){ transition(result,marker); }, 7000);  
+
   
   //END CAMERA READY 
 
