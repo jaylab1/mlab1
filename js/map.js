@@ -75,6 +75,9 @@ document.addEventListener("deviceready", function() {
   			    	var past     = localStorage.getItem('MARKER1');
   				var res      = past.split(",");
   				var position = [res[0],res[1]];
+  				
+  					alert(position[0]);
+  				
             			transition(result);
 
   			
