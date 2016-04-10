@@ -23,7 +23,7 @@ document.addEventListener("deviceready", function() {
   				
   				SENDget1(
   					'getCARS',
-  					''
+  					'token=anflayjGks8338FGFGFDGD!wofk^&#Gkd43FAOQ73'
   				);
         
         var location = setPosition(position.coords.latitude, position.coords.longitude);
