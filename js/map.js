@@ -70,23 +70,25 @@ document.addEventListener("deviceready", function() {
     	      }, function(marker) {
   		
   			localStorage.setItem('MARKER1',marker.get("position"));
-  			var result = [33.8836142,35.5303557];
   			
-  			setTimeout(function(){ transition(result,marker); }, 7000);
+  			
+  			var MYMARKER1 = marker;
+  			
+  			
             			
 
   			
 	      });
 	      
-	     // alert(marker);
-    	      
+
   			
   			
 	},2000);
 
 
-	
-
+	    // alert(marker);
+	    var result = [33.8836142,35.5303557];
+    	    setTimeout(function(){ transition(result,MYMARKER1); }, 7000);  
   
   //END CAMERA READY 
 
