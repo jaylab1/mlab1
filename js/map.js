@@ -232,18 +232,18 @@ function GETcoord(lat,long,mode='0'){
     
     function moveMarker(position,marker){
    
-   	alert(position[0]);
+   	//alert(position[0]);
    	
-   	alert("minus="+deltaLat);
+   	//alert("minus="+deltaLat);
        
         position[0] = parseFloat(position[0])+parseFloat(deltaLat);
         position[1] = parseFloat(position[1])+parseFloat(deltaLng);
         
-        alert(position[0]);
+        //alert(position[0]);
         
         var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
         
-        alert("afterlag="+position[0]);
+        //alert("afterlag="+position[0]);
         
         marker.setPosition(latlng);
         
