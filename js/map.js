@@ -72,12 +72,6 @@ document.addEventListener("deviceready", function() {
   			localStorage.setItem('MARKER1',marker.get("position"));
   			
   			
-  			var MYMARKER1 = marker;
-  			
-  			
-            			
-
-  			
 	      });
 	      
 
