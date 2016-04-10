@@ -232,18 +232,16 @@ function GETcoord(lat,long,mode='0'){
     
     function moveMarker(position,marker){
    
-   	alert(deltaLat);
+   	alert(position[0]);
        
         position[0] += deltaLat;
         position[1] += deltaLng;
         
-        	
+        alert(position[0]);
         
         var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
         
         marker.setPosition(latlng);
-        
-        
         
         if(i!=numDeltas){
             i++;
