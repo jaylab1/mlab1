@@ -49,7 +49,6 @@ function SENDget1(KEY,PARAMETERS){
                                 },
             error       :       function(jqXHR, textStatus, errorThrown) {
                 
-                    LOADER(animate,'OUT'); 
                     ERROR(jqXHR, textStatus, errorThrown)
 
             }                     
