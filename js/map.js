@@ -236,8 +236,8 @@ function GETcoord(lat,long,mode='0'){
    	
    	alert("minus="+deltaLat);
        
-        position[0] = parseInt(position[0])+parseInt(deltaLat);
-        position[1] = parseInt(position[1])+parseInt(deltaLng);
+        position[0] = parseFloat(position[0])+parseFloat(deltaLat);
+        position[1] = parseFloat(position[1])+parseFloat(deltaLng);
         
         alert(position[0]);
         
