@@ -238,15 +238,9 @@ function GETcoord(lat,long,mode='0'){
         position[0] += deltaLat;
         position[1] += deltaLng;
         
-	        alert(position);
-        
         var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
         
-        alert(latlng);
-        
         //marker.setPosition(latlng);
-        
-        	alert(latlng);
         
         if(i!=numDeltas){
             i++;
