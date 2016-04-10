@@ -70,7 +70,7 @@ document.addEventListener("deviceready", function() {
     	      }, function(marker) {
   		
   			localStorage.setItem('MARKER1',marker.get("position"));
-  			var result = [33.8772144,35.5193908];
+  			var result = [33.8836142,35.5303557];
             			transition(result,marker);
 
   			
