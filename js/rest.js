@@ -57,7 +57,7 @@ function SENDget1(KEY,PARAMETERS){
 					
 			};
 			
-			alert(JSON.stringify(markers));
+			alert(JSON.stringify(DATA.location));
 			
                 
                                 },
