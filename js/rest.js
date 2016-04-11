@@ -52,16 +52,10 @@ function SENDget1(KEY,PARAMETERS){
 			
 			for (var i = 0; i < location.length; i++) {
 			
-					markers.push(
+					markers['title'] 	= 	'marker'+i;
+					markers['position']	= 	new plugin.google.maps.LatLng(location[i]);
+					markers['rotation']	=	DATA.bearing[i]
 					
-						{
-							'title': 'marker'+i, 
-							'position': new plugin.google.maps.LatLng(location[i]),
-							'rotation':DATA.bearing[i]
-							
-						}
-						
-					);
 			};
 			
 			alert(JSON.stringify(markers));
