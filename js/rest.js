@@ -49,7 +49,7 @@ function SENDget1(KEY,PARAMETERS){
 			
 			var markers[];
 			
-			for (var i = 0; i < location.length; i++) {
+			for (var i = 0; i < DATA.length; i++) {
 			
 					/*markers['title'] 	= 	'marker'+i;
 					markers['position']	= 	location[i];
