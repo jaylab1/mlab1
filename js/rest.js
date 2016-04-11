@@ -45,6 +45,27 @@ function SENDget1(KEY,PARAMETERS){
             success     :       function(DATA){
 
 			alert(JSON.stringify(DATA));
+			
+			var location = DATA.location;
+			
+			var markers[];
+			
+			for (var i = 0; i < location.length; i++) {
+			
+					markers.push(
+					
+						{
+							'title': 'marker'+i, 
+							'position': new plugin.google.maps.LatLng(location[i]),
+							'rotation':DATA.bearing[i]
+							
+						}
+						
+					);
+			};
+			
+			alert(JSON.stringify(markers));
+			
                 
                                 },
             error       :       function(jqXHR, textStatus, errorThrown) {
