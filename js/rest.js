@@ -44,7 +44,6 @@ function SENDget1(KEY,PARAMETERS){
             data        :       KEY+'=true&'+PARAMETERS,
             success     :       function(DATA){
 
-			alert(JSON.stringify(DATA));
 			
 			var location = DATA.location;
 			
@@ -53,7 +52,7 @@ function SENDget1(KEY,PARAMETERS){
 			for (var i = 0; i < location.length; i++) {
 			
 					markers['title'] 	= 	'marker'+i;
-					markers['position']	= 	new plugin.google.maps.LatLng(location[i]);
+					markers['position']	= 	location[i];
 					markers['rotation']	=	DATA.bearing[i]
 					
 			};
