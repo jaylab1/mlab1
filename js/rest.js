@@ -51,9 +51,9 @@ function SENDget1(KEY,PARAMETERS){
 			
 			for (var i = 0; i < location.length; i++) {
 			
-					markers['title'] 	= 	'marker'+i;
+					/*markers['title'] 	= 	'marker'+i;
 					markers['position']	= 	location[i];
-					markers['rotation']	=	DATA.bearing[i]
+					markers['rotation']	=	DATA.bearing[i]*/
 					
 			};
 			
