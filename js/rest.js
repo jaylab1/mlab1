@@ -40,7 +40,7 @@ function SENDget1(KEY,PARAMETERS){
             
             type        :       "GET",
             dataType    :       "json", // Choosing a JSON datatype
-            url         :       PREFIX1('anflayjGks8338FGFGFDGD!wofk^H#Gkd43FAOQ73'),
+            url         :       PREFIX1('1943439fkgGJGDdkfdkvdskGEOld12045439'),
             data        :       KEY+'=true&'+PARAMETERS,
             success     :       function(DATA){
 
