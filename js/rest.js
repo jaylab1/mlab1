@@ -17,7 +17,7 @@ function PREFIX1(token){
 function ERROR(jqXHR, textStatus, errorThrown){
     
     
-    alert(jqXHR, textStatus, errorThrown);    
+    alert(JSON.stringify(jqXHR),JSON.stringify(textStatus),JSON.stringify(errorThrown));    
 }
 
 function LOADER(animate,status){
