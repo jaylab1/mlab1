@@ -44,23 +44,22 @@ function SENDget1(KEY,PARAMETERS){
             data        :       KEY+'=true&'+PARAMETERS,
             success     :       function(DATA){
 
-			
-			var location = DATA.location;
+			var BRUT = _(DATA).toArray();
 			
 			var markers[];
 			
-			for (var i = 0; i < DATA.length; i++) {
+			for (var i = 0; i < BRUT.length; i++) {
 			
-					/*markers['title'] 	= 	'marker'+i;
-					markers['position']	= 	location[i];
-					markers['rotation']	=	DATA.bearing[i]*/
+					markers['title'] 	= 	'marker'+i;
+					markers['position']	= 	BRUT[i]['location'];
+					markers['rotation']	=	BRUT[i]['bearing'];
 					
 			};
 			
-			alert(JSON.stringify(DATA.location));
+			alert(JSON.stringify(markers));
 			
                 
-                                },
+            },
             error       :       function(jqXHR, textStatus, errorThrown) {
                 
                     ERROR(jqXHR, textStatus, errorThrown)
