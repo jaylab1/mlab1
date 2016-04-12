@@ -76,7 +76,7 @@ document.addEventListener("deviceready", function() {
                 'duration': 4000 // 10 seconds
             }, function() {
 
-  		setCenter(location);
+  		map.setCenter(location);
   		
 	    }); 
             
@@ -101,9 +101,9 @@ document.addEventListener("deviceready", function() {
   			{'title': 'markerN', 'position': new plugin.google.maps.LatLng(33.8899086,35.5191408)}
 		];			
 			
-				/*addMarkers(datas, function(markers) {
+				addMarkers(map,datas, function(markers) {
   					markers[markers.length - 1].showInfoWindow();
-				});*/
+				});
 	      
 
   			
@@ -289,7 +289,7 @@ function GETcoord(lat,long,mode='0'){
         }
     }
 	
-	function addMarkers(data, callback) {
+	function addMarkers(map,data, callback) {
 		var markers = [];
 		function onMarkerAdded(marker) {
 				markers.push(marker);
