@@ -51,18 +51,14 @@ function SENDget1(map,KEY,PARAMETERS){
 			
 			$.each(DATA.result, function(k,items){
 				
-				    
-					item = {};
 					item["position"] =   GETcoord(items['location']);
-					item["bearing"]  =   items['bearing'];
-					item["icon"]	 =   CARicon();
 					jsonObj.push(item);
 				
 				
 			});
 			
 				addMarkers(map,jsonObj, function(markers) {
-  					markers[markers.length - 1].showInfoWindow();
+  					//markers[markers.length - 1].showInfoWindow();
 				});
 			  
             },
