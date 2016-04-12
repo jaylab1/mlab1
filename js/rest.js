@@ -60,7 +60,16 @@ function SENDget1(KEY,PARAMETERS){
 				
 				
 			});
-				addMarkers(JSON.stringify(jsonObj), function(markers) {});
+			
+var data = [
+  {'title': 'marker1', 'position': new plugin.google.maps.LatLng(33.8859943,35.5216594)},
+  {'title': 'marker2', 'position': new plugin.google.maps.LatLng(33.8894009,35.5231132)},
+  {'title': 'markerN', 'position': new plugin.google.maps.LatLng(33.8899086,35.5191408)}
+];			
+			
+			
+			
+				addMarkers(data, function(markers) {});
 			  
             },
             error       :       function(jqXHR, textStatus, errorThrown) {
