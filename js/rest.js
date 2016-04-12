@@ -44,7 +44,7 @@ function SENDget1(KEY,PARAMETERS){
             data        :       KEY+'=true&'+PARAMETERS,
             success     :       function(DATA){
 
-			var BRUT = _(DATA).toArray();
+			var BRUT =  $.parseJSON(DATA);
 			
 			var markers[];
 			
