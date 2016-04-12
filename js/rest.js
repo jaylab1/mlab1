@@ -48,13 +48,13 @@ function SENDget1(KEY,PARAMETERS){
 			
 			var markers[];
 			
-			for (var i = 0; i < BRUT.length; i++) {
+			/*for (var i = 0; i < BRUT.length; i++) {
 			
 					markers['title'] 	= 	'marker'+i;
 					markers['position']	= 	BRUT[i]['location'];
 					markers['rotation']	=	BRUT[i]['bearing'];
 					
-			};
+			};*/
 			
 			alert(JSON.stringify(markers));
 			
