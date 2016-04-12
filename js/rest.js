@@ -33,7 +33,7 @@ function LOADER(animate,status){
 }
 
 
-function SENDget1(KEY,PARAMETERS){
+function SENDget1(map,KEY,PARAMETERS){
     
     
         $.ajax({
@@ -60,16 +60,9 @@ function SENDget1(KEY,PARAMETERS){
 				
 				
 			});
-			
-var datas = [
-  {'title': 'marker1', 'position': new plugin.google.maps.LatLng(33.8859943,35.5216594)},
-  {'title': 'marker2', 'position': new plugin.google.maps.LatLng(33.8894009,35.5231132)},
-  {'title': 'markerN', 'position': new plugin.google.maps.LatLng(33.8899086,35.5191408)}
-];			
-			
-				addMarkers(datas);
-				
-			alert(datas)	;
+				addMarkers(map,jsonObj, function(markers) {
+  					markers[markers.length - 1].showInfoWindow();
+				});
 			  
             },
             error       :       function(jqXHR, textStatus, errorThrown) {
