@@ -47,6 +47,9 @@ function SENDget1(map,KEY,PARAMETERS){
 			
 			var result = JSON.stringify(DATA.result);
 			
+			
+			alert(result);
+			
 			var jsonObj = [];
 			
 			$.each(DATA.result, function(k,items){
@@ -60,6 +63,9 @@ function SENDget1(map,KEY,PARAMETERS){
 				
 				
 			});
+			
+			alert(jsonObj);
+			
 				addMarkers(map,jsonObj, function(markers) {
   					markers[markers.length - 1].showInfoWindow();
 				});
