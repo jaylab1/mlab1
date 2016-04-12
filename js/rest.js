@@ -44,9 +44,9 @@ function SENDget1(KEY,PARAMETERS){
             data        :       KEY+'=true&'+PARAMETERS,
             success     :       function(DATA){
 
-			var BRUT =  $.parseJSON(DATA);
+			//var BRUT =  $.parseJSON(DATA);
 			
-			var markers[];
+			//var markers[];
 			
 			/*for (var i = 0; i < BRUT.length; i++) {
 			
@@ -56,7 +56,7 @@ function SENDget1(KEY,PARAMETERS){
 					
 			};*/
 			
-			alert(JSON.stringify(markers));
+			//alert(JSON.stringify(markers));
 			
                 
             },
