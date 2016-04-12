@@ -61,15 +61,15 @@ function SENDget1(KEY,PARAMETERS){
 				
 			});
 			
-var data = [
+var datas = [
   {'title': 'marker1', 'position': new plugin.google.maps.LatLng(33.8859943,35.5216594)},
   {'title': 'marker2', 'position': new plugin.google.maps.LatLng(33.8894009,35.5231132)},
   {'title': 'markerN', 'position': new plugin.google.maps.LatLng(33.8899086,35.5191408)}
 ];			
 			
-			
-			
-				addMarkers(data, function(markers) {});
+				addMarkers(datas);
+				
+			alert(datas)	;
 			  
             },
             error       :       function(jqXHR, textStatus, errorThrown) {
