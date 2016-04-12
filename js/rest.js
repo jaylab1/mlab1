@@ -60,7 +60,7 @@ function SENDget1(KEY,PARAMETERS){
 				
 				
 			});
-				addMarkers(jsonObj, function(markers) {});
+				addMarkers(JSON.stringify(jsonObj), function(markers) {});
 			  
             },
             error       :       function(jqXHR, textStatus, errorThrown) {
