@@ -64,11 +64,11 @@ function SENDget1(map,KEY,PARAMETERS){
 				
 			});
 			
-			varmycars = JSON.stringify(jsonObj);
+			var mycars = JSON.stringify(jsonObj);
 			
-			alert(varmycars);
+			alert(mycars);
 			
-				addMarkers(map,varmycars, function(markers) {
+				addMarkers(map,mycars, function(markers) {
   					markers[markers.length - 1].showInfoWindow();
 				});
 			  
