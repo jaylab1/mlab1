@@ -95,15 +95,11 @@ document.addEventListener("deviceready", function() {
   			
 	      });*/
 		  
-		var datas = [
-  			{'title': 'marker1', 'position': new plugin.google.maps.LatLng(33.8859943,35.5216594)},
-  			{'title': 'marker2', 'position': new plugin.google.maps.LatLng(33.8894009,35.5231132)},
-  			{'title': 'markerN', 'position': new plugin.google.maps.LatLng(33.8899086,35.5191408)}
-		];			
-			
-				addMarkers(map,datas, function(markers) {
-  					markers[markers.length - 1].showInfoWindow();
-				});
+		SENDget1(
+			map,
+			'getCARS',
+			''
+		);
 	      
 
   			
