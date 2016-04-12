@@ -101,9 +101,9 @@ document.addEventListener("deviceready", function() {
   			{'title': 'markerN', 'position': new plugin.google.maps.LatLng(33.8899086,35.5191408)}
 		];			
 			
-				addMarkers(datas, function(markers) {
+				/*addMarkers(datas, function(markers) {
   					markers[markers.length - 1].showInfoWindow();
-				});
+				});*/
 	      
 
   			
