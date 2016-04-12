@@ -44,21 +44,24 @@ function SENDget1(KEY,PARAMETERS){
             data        :       KEY+'=true&'+PARAMETERS,
             success     :       function(DATA){
 
-			//var BRUT =  $.parseJSON(DATA);
 			
-			//var markers[];
+			var result = JSON.stringify(DATA.result);
 			
-			/*for (var i = 0; i < BRUT.length; i++) {
+			var jsonObj = [];
 			
-					markers['title'] 	= 	'marker'+i;
-					markers['position']	= 	BRUT[i]['location'];
-					markers['rotation']	=	BRUT[i]['bearing'];
-					
-			};*/
-			
-			//alert(JSON.stringify(markers));
-			
-                
+			$.each(DATA.result, function(k,items){
+				
+				    
+					item = {}
+					item["position"] =   GETcoord(items['location']);
+					item["bearing"]  =   items['bearing'];
+					item["icon"]	 =   CARicon();
+					jsonObj.push(item);
+				
+				
+			});
+				addMarkers(jsonObj, function(markers) {});
+			  
             },
             error       :       function(jqXHR, textStatus, errorThrown) {
                 
@@ -115,3 +118,8 @@ function GETgeoaddress(KEY,DATA){
   			localStorage.setItem('FETCHlocation','YES');
 	}
 }
+
+
+
+
+

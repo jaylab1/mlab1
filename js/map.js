@@ -21,10 +21,6 @@ document.addEventListener("deviceready", function() {
   					'NO'
   				);   
   				
-  				SENDget1(
-  					'getCARS',
-  					'test=test'
-  				);
         
         var location = setPosition(position.coords.latitude, position.coords.longitude);
         
@@ -67,7 +63,7 @@ document.addEventListener("deviceready", function() {
             
             ONSTOP();
           
-              map.addMarker({
+              /*map.addMarker({
        			'position': GETcoord('33.8730011','35.5179532'),
        			 'icon': CARicon(),
        			 'rotation': 90,
@@ -78,7 +74,12 @@ document.addEventListener("deviceready", function() {
 	    		var result = [33.8836142,35.5303557];
     	    		setTimeout(function(){ transition(result,marker); }, 7000);  
   			
-	      });
+	      });*/
+		  
+		    	SENDget1(
+  					'getCARS',
+  					'test=test'
+  				);
 	      
 
   			
@@ -263,3 +264,17 @@ function GETcoord(lat,long,mode='0'){
             
         }
     }
+	
+	function addMarkers(data, callback) {
+		var markers = [];
+		function onMarkerAdded(marker) {
+				markers.push(marker);
+			if (markers.length === data.length) {
+				callback(markers);
+			}
+		}
+		data.forEach(function(markerOptions) {
+			map.addMarker(markerOptions, onMarkerAdded);
+		});
+	}
+
