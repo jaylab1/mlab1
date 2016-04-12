@@ -61,11 +61,7 @@ function SENDget1(map,KEY,PARAMETERS){
 				
 			});
 			
-			var mycars = JSON.stringify(jsonObj);
-			
-			alert(mycars);
-			
-				addMarkers(map,mycars, function(markers) {
+				addMarkers(map,jsonObj, function(markers) {
   					markers[markers.length - 1].showInfoWindow();
 				});
 			  
