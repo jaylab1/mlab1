@@ -248,7 +248,7 @@ function GETcoord(lat,long,mode='0'){
 	var result   = localStorage.getItem('TOmarker'+z).split(",");
 	
 	
-	//alert('result:'+result[0]); alert('position:'+position[0]);
+	alert('result:'+result[0]); alert('position:'+position[0]);
 	
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
