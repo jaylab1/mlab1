@@ -65,7 +65,7 @@ var data = [
 ];
 
 
-			alert(jsonObj); alert(data);
+			alert(JSON.stringify(jsonObj)); alert(JSON.stringify(data));
 			
 			
 				addMarkers(map,jsonObj, function(markers) {
