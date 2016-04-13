@@ -63,6 +63,9 @@ var data = [
   {'position': new plugin.google.maps.LatLng(33.8347302,35.5693034)},
   {'position': new plugin.google.maps.LatLng(33.858167,35.5124377)}
 ];
+
+
+			alert(jsonObj); alert(data);
 			
 			
 				addMarkers(map,jsonObj, function(markers) {
