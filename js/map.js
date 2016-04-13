@@ -241,11 +241,11 @@ function GETcoord(lat,long,mode='0'){
     var i = 0;
     var deltaLat;
     var deltaLng;
-    function transition(z,result,marker){
+    function transition(z,results,marker){
         i = 0;
         
 	var position = localStorage.getItem('FROMmarker'+z).split(",");
-	result = result.split(",");
+	var result = results.split(",");
 	
 	
 	alert('result:'+result[0]); alert('position:'+position[0]);
