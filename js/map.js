@@ -244,6 +244,8 @@ function GETcoord(lat,long,mode='0'){
     function transition(from,result,marker){
         i = 0;
         
+        	alert(from); alert(result);
+        
   	var position = from;
        
         deltaLat = (result[0] - position[0])/numDeltas;
@@ -278,7 +280,7 @@ function GETcoord(lat,long,mode='0'){
             
         }else{
             
-            alert("finished");
+            //alert("finished");
             
         }
     }
