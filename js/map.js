@@ -321,7 +321,7 @@ function GETcoord(lat,long,mode='0'){
         				
     				   });
     				   
-    				   FROM.push(items['from']);
+    				   FROM.push([items['from']]);
     				   TO.push(items['to']);
     				   ROTATION.push(items['bearing']);
     				   
