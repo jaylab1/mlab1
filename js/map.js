@@ -244,7 +244,7 @@ function GETcoord(lat,long,mode='0'){
     function transition(from,result,marker){
         i = 0;
         
-        	alert(from); alert(result);
+        	alert('from:'+from); alert('to':+result);
         
   	var position = from;
        
