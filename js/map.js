@@ -244,16 +244,16 @@ function GETcoord(lat,long,mode='0'){
     function transition(z,result,marker){
         i = 0;
         
-	var position = localStorage.getItem('FROMmarker'+z);
+	var position = [localStorage.getItem('FROMmarker'+z)];
 	
-	alert('position'+JSON.stringify(position)) ;alert(z);
-        
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
         moveMarker(position,marker);
     }
     
     function moveMarker(position,marker){
+       
+        alert(position[0]);
        
         position[0] = parseFloat(position[0])+parseFloat(deltaLat);
         position[1] = parseFloat(position[1])+parseFloat(deltaLng);
