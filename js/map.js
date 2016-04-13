@@ -244,10 +244,10 @@ function GETcoord(lat,long,mode='0'){
     function transition(z,result,marker){
         i = 0;
         
-	var taste = localStorage.getItem('FROMmarkers');
-	var position = taste[z].split(",");
+	var MARKERS = localStorage.getItem('MARKERS');
+	var position = [MARKERS[z]['from']]
 	
-	alert(JSON.stringify(taste[z])) ;alert(z);
+	alert(JSON.stringify(position)) ;alert(z);
         
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
@@ -333,12 +333,12 @@ function GETcoord(lat,long,mode='0'){
   				//markers[0].showInfoWindow();
   				setTimeout(function(){ 
   				
-  					//localStorage.setItem('FROMmarkers',FROM);
+  				        localStorage.setItem('MARKERS',PREV);
   					for (var i = 0; i < markers.length; i++) {
   						
   						alert(PREV[i]['to']);
   						
-    	    					var result = [TO[i]];
+    	    					var result = [PREV[i]['to']];
     	    					transition(i,result,markers[i]); 
     	    					
   					}
