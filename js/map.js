@@ -336,9 +336,9 @@ function GETcoord(lat,long,mode='0'){
   				
   					for (var i = 0; i < markers.length; i++) {
   					
-						to = [TO[i]];
-						from   = [FROM[i]];
-    	    					transition(from,to,markers[i]); 
+						var to         = [TO[i]];
+						var position   = [FROM[i]];
+    	    					transition(to,markers[i]); 
     	    					
   					}
   					
