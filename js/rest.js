@@ -51,17 +51,17 @@ function SENDget1(map,KEY,PARAMETERS){
 			
 			$.each(DATA.result, function(k,items){
 				
-				   alert(items['location']);
-				   
 				   jsonObj.push({
-        				position: GETcoord(items['location']),
+        				position: new plugin.google.maps.LatLng(items['location'])},
         				bearing: items['bearing'],
         				icon: CARicon()
     				   });
     				   
 			});
 			
-				addMarkers(map,jsonObj, function(markers) {
+			alert(jsonObj);
+			
+				addMarkers(map,JSON.stringify(jsonObj), function(markers) {
   					//markers[markers.length - 1].showInfoWindow();
 				});
 			  
