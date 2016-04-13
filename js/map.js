@@ -255,7 +255,7 @@ function GETcoord(lat,long,mode='0'){
         position[0] = parseFloat(position[0])+parseFloat(deltaLat);
         position[1] = parseFloat(position[1])+parseFloat(deltaLng);
         
-        //alert(position[0]);
+        alert(position[0]);
         
         var latlng = new plugin.google.maps.LatLng(position[0], position[1]);
         
