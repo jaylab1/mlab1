@@ -246,6 +246,9 @@ function GETcoord(lat,long,mode='0'){
         
 	var position = [localStorage.getItem('FROMmarker'+z)];
 	
+	
+	alert('result:'+result[0]); alert('position:'+position[0]);
+	
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
         moveMarker(position,marker);
@@ -253,7 +256,7 @@ function GETcoord(lat,long,mode='0'){
     
     function moveMarker(position,marker){
        
-        alert(position[0]);
+        alert('afterpos'+position[0]);
        
         position[0] = parseFloat(position[0])+parseFloat(deltaLat);
         position[1] = parseFloat(position[1])+parseFloat(deltaLng);
@@ -335,7 +338,6 @@ function GETcoord(lat,long,mode='0'){
   				        
   					for (var i = 0; i < markers.length; i++) {
   						
-  						alert(PREV[i]['to']);
   						localStorage.setItem('FROMmarker'+i,[PREV[i]['from']]);
     	    					var result = [PREV[i]['to']];
     	    					transition(i,result,markers[i]); 
