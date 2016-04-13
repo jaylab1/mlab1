@@ -57,7 +57,15 @@ function SENDget1(map,KEY,PARAMETERS){
     				   
 			});
 			
-				addMarkers(map,jsonObj, function(markers) {
+			
+var data = [
+  {'title': 'marker1', 'position': new plugin.google.maps.LatLng(33.8798699,35.55197)},
+  {'title': 'marker2', 'position': new plugin.google.maps.LatLng(33.8347302,35.5693034)},
+  {'title': 'markerN', 'position': new plugin.google.maps.LatLng(33.858167,35.5124377)}
+];
+			
+			
+				addMarkers(map,data, function(markers) {
   					//markers[markers.length - 1].showInfoWindow();
 				});
 			  
