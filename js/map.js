@@ -298,7 +298,7 @@ function GETcoord(lat,long,mode='0'){
 	}
 	
 	
-      function FETCHmarker1(map,results){
+      function FETCHmarker1(map,results,first='yes'){
 			
 	var jsonObj = [];
 			
@@ -320,6 +320,9 @@ function GETcoord(lat,long,mode='0'){
         				
     				   });
     				   
+				localStorage.setItem('FROMmarker'+k,[items['from']]);
+  				localStorage.setItem('TOmarker'+k,[items['to']]);
+    				   
     				   PREV.push({
     				   	
     				   	'from'    : items['from'],
@@ -329,30 +332,20 @@ function GETcoord(lat,long,mode='0'){
     				   });
     				   
 		});
-
-			
-		addMarkers(map,jsonObj, function(markers) {
+	
+			addMarkers(map,jsonObj, function(markers) {
 				
-			FETCHmarker2(markers,PREV);
-  					
-		});
-      }
-      
-      
-      function FETCHmarker2(markers,PREV){
-      	
   				//markers[0].showInfoWindow();
   				setTimeout(function(){ 
   				
-  				        
   					for (var i = 0; i < markers.length; i++) {
   						
-  						localStorage.setItem('FROMmarker'+i,[PREV[i]['from']]);
-  						localStorage.setItem('TOmarker'+i,[PREV[i]['to']]);
     	    					transition(i,markers[i]); 
-    	    					
   					}
   					
   				}, 7000); 
+  					
+			});
       }
+      
 
