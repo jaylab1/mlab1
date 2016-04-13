@@ -241,10 +241,10 @@ function GETcoord(lat,long,mode='0'){
     var i = 0;
     var deltaLat;
     var deltaLng;
-    function transition(result,marker){
+    function transition(from,result,marker){
         i = 0;
         
-        var past     = localStorage.getItem('MARKER1');
+        var past     = from;
   	var res      = past.split(",");
   	var position = [res[0],res[1]];
        
@@ -331,11 +331,8 @@ function GETcoord(lat,long,mode='0'){
   				
   					for (var i = 0; i < markers.length; i++) {
   					
-  						//translate = items['location'].split(","); 
-  						localStorage.setItem('MARKER1',markers[i].get("position"));
 						result = [33.8836142,35.5303557];
-    	    					transition(result,markers[i]); 
-    	    					
+    	    					transition(markers[i].get("position"),result,markers[i]); 
     	    					
   					}
   					
