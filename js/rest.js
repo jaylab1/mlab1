@@ -52,16 +52,14 @@ function SENDget1(map,KEY,PARAMETERS){
 			$.each(DATA.result, function(k,items){
 				
 				   jsonObj.push({
-        				position: new plugin.google.maps.LatLng(items['location']),
-        				bearing: items['bearing'],
-        				icon: CARicon()
+        				position: new plugin.google.maps.LatLng(items['location'])
     				   });
     				   
 			});
 			
 			alert(jsonObj);
 			
-				addMarkers(map,JSON.stringify(jsonObj), function(markers) {
+				addMarkers(map,jsonObj, function(markers) {
   					//markers[markers.length - 1].showInfoWindow();
 				});
 			  
