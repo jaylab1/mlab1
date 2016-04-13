@@ -315,7 +315,8 @@ function GETcoord(lat,long,mode='0'){
 				   jsonObj.push({
         				'position' : GETcoord(translate[0],translate[1]),
         				'rotation' : items['bearing'],
-        				'icon'     : CARicon()
+        				'icon'     : CARicon(),
+        				'title'    : 'car'+k
         				
     				   });
     				   
