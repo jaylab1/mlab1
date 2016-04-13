@@ -326,13 +326,14 @@ function GETcoord(lat,long,mode='0'){
 		addMarkers(map,jsonObj, function(markers) {
 					
   				//markers[0].showInfoWindow();
-  				for (var i = 0; i < markers.length; i++) {
+  				//for (var i = 0; i < markers.length; i++) {
   					
   					//translate = items['location'].split(","); 
+  					localStorage.setItem('MARKER1',markers[0].get("position"));
 					var result = [33.8836142,35.5303557];
-    	    				setTimeout(function(){ transition(result,markers[i]); }, 7000); 	
+    	    				setTimeout(function(){ transition(result,markers[0]); }, 7000); 	
   					
-  				}
+  				//}
   					
 		});
       }
