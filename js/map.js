@@ -244,8 +244,7 @@ function GETcoord(lat,long,mode='0'){
     function transition(z,result,marker){
         i = 0;
         
-	var MARKERS = localStorage.getItem('MARKERS');
-	var position = [MARKERS[z]['from']]
+	var position = localStorage.getItem('FROMmarker'+z);
 	
 	alert('position'+JSON.stringify(position)) ;alert(z);
         
@@ -333,11 +332,11 @@ function GETcoord(lat,long,mode='0'){
   				//markers[0].showInfoWindow();
   				setTimeout(function(){ 
   				
-  				        localStorage.setItem('MARKERS',PREV);
+  				        
   					for (var i = 0; i < markers.length; i++) {
   						
   						alert(PREV[i]['to']);
-  						
+  						localStorage.setItem('FROMmarker'+i,[PREV[i]['from']]);
     	    					var result = [PREV[i]['to']];
     	    					transition(i,result,markers[i]); 
     	    					
