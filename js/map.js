@@ -333,6 +333,14 @@ function GETcoord(lat,long,mode='0'){
 			
 		addMarkers(map,jsonObj, function(markers) {
 				
+			FETCHmarker2(markers,PREV);
+  					
+		});
+      }
+      
+      
+      function FETCHmarker2(markers,PREV){
+      	
   				//markers[0].showInfoWindow();
   				setTimeout(function(){ 
   				
@@ -346,24 +354,5 @@ function GETcoord(lat,long,mode='0'){
   					}
   					
   				}, 7000); 
-  					
-		});
-      }
-      
-      
-      function FETCHmarker2(results){
-      	
-		var translate;
-		
-		$.each(results, function(k,items){
-				
-			translate = items['location'].split(","); 
-			var result = [33.8836142,35.5303557];
-    	    		setTimeout(function(){ transition(result,marker); }, 7000); 
-    				   
-		});      	
-
-      	
-      	
       }
 
