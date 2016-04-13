@@ -326,8 +326,12 @@ function GETcoord(lat,long,mode='0'){
 		addMarkers(map,jsonObj, function(markers) {
 					
   				//markers[0].showInfoWindow();
+  				
+  				alert(markers.length);
+  				
   				for (var i = 0; i < markers.length; i++) {
   					
+  					alert(i);
   					//translate = items['location'].split(","); 
   					localStorage.setItem('MARKER1',markers[i].get("position"));
 					var result = [33.8836142,35.5303557];
