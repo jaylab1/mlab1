@@ -297,4 +297,35 @@ function GETcoord(lat,long,mode='0'){
 			map.addMarker(markerOptions, onMarkerAdded);
 		});
 	}
+	
+	
+      function FETCHmarker1(map,results){
+      	
+	localStorage.setItem('MARKERS',results);			
+			
+	var jsonObj = [];
+			
+	var translate = '';
+			
+			
+		$.each(results, function(k,items){
+				
+			translate = items['location'].split(","); 
+			
+				   jsonObj.push({
+        				'position' : GETcoord(translate[0],translate[1]),
+        				'rotation' : items['bearing'],
+        				'icon'     : CARicon()
+        				
+    				   });
+    				   
+			});
+
+			
+		addMarkers(map,jsonObj, function(markers) {
+					
+  				/markers[markers.length - 1].showInfoWindow();
+  					
+		});
+      }
 
