@@ -244,11 +244,7 @@ function GETcoord(lat,long,mode='0'){
     function transition(from,result,marker){
         i = 0;
         
-        alert(from);
-        
-        var past     = from;
-  	var res      = past.split(",");
-  	var position = [res[0],res[1]];
+  	var position = from;
        
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
@@ -327,14 +323,17 @@ function GETcoord(lat,long,mode='0'){
 			
 		addMarkers(map,jsonObj, function(markers) {
 				
-				var result;	
+				var result;
+				var from;
   				//markers[0].showInfoWindow();
   				setTimeout(function(){ 
   				
   					for (var i = 0; i < markers.length; i++) {
   					
 						result = [33.8836142,35.5303557];
-    	    					transition(markers[i].get("position"),result,markers[i]); 
+						from   = [markers[i].get("position")];
+						
+    	    					transition(from,result,markers[i]); 
     	    					
   					}
   					
