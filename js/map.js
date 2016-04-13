@@ -241,19 +241,16 @@ function GETcoord(lat,long,mode='0'){
     var i = 0;
     var deltaLat;
     var deltaLng;
-    function transition(result,marker){
+    function transition(pos,result,marker){
         i = 0;
-       
+        var position = pos;
+        
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
         moveMarker(position,marker);
     }
     
     function moveMarker(position,marker){
-   
-   	//alert(position[0]);
-   	
-   	//alert("minus="+deltaLat);
        
         position[0] = parseFloat(position[0])+parseFloat(deltaLat);
         position[1] = parseFloat(position[1])+parseFloat(deltaLng);
@@ -336,7 +333,7 @@ function GETcoord(lat,long,mode='0'){
   					
 						var to         = [TO[i]];
 						var position   = [FROM[i]];
-    	    					transition(to,markers[i]); 
+    	    					transition(position,to,markers[i]); 
     	    					
   					}
   					
