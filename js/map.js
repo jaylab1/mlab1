@@ -244,7 +244,7 @@ function GETcoord(lat,long,mode='0'){
     function transition(from,result,marker){
         i = 0;
         
-        	alert('from:'+from); alert('to':+result);
+        	alert(from); alert(result);
         
   	var position = from;
        
@@ -300,17 +300,21 @@ function GETcoord(lat,long,mode='0'){
 	
 	
       function FETCHmarker1(map,results){
-      	
-	localStorage.setItem('MARKERS',results);			
 			
 	var jsonObj = [];
 			
 	var translate = '';
+	
+	var FROM = [];
+	
+	var TO   = [];
+	
+	var ROTATION = [];
 			
 			
 		$.each(results, function(k,items){
 				
-			translate = items['location'].split(","); 
+			translate = items['from'].split(","); 
 			
 				   jsonObj.push({
         				'position' : GETcoord(translate[0],translate[1]),
@@ -320,7 +324,11 @@ function GETcoord(lat,long,mode='0'){
         				
     				   });
     				   
-			});
+    				   FROM.push(items['from']);
+    				   TO.push(items['to']);
+    				   ROTATION.push(items['bearing']);
+    				   
+		});
 
 			
 		addMarkers(map,jsonObj, function(markers) {
@@ -332,10 +340,9 @@ function GETcoord(lat,long,mode='0'){
   				
   					for (var i = 0; i < markers.length; i++) {
   					
-						result = [33.8836142,35.5303557];
-						from   = [markers[i].get("position")];
-						
-    	    					transition(from,result,markers[i]); 
+						to = [TO[i]];
+						from   = [FROM[i]];
+    	    					transition(from,to,markers[i]); 
     	    					
   					}
   					
