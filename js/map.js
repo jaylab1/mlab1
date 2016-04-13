@@ -301,11 +301,8 @@ function GETcoord(lat,long,mode='0'){
 			
 	var translate = '';
 	
-	var FROM = [];
-	
-	var TO   = [];
-	
-	var ROTATION = [];
+	var PREV = [];
+
 			
 			
 		$.each(results, function(k,items){
@@ -320,9 +317,13 @@ function GETcoord(lat,long,mode='0'){
         				
     				   });
     				   
-    				   FROM.push({items['from']});
-    				   TO.push({items['to']});
-    				   ROTATION.push({items['bearing']});
+    				   PREV.push({
+    				   	
+    				   	'from'    : items['from'],
+    				   	'to'      : items['to'],
+    				   	'rotation': items['bearing']
+     				   	
+    				   });
     				   
 		});
 
@@ -334,7 +335,9 @@ function GETcoord(lat,long,mode='0'){
   				
   					localStorage.setItem('FROMmarkers',FROM);
   					for (var i = 0; i < markers.length; i++) {
-  					
+  						
+  						alert(PREV[i]['to']);
+  						
     	    					var result = [TO[i]];
     	    					transition(i,result,markers[i]); 
     	    					
