@@ -55,7 +55,10 @@ function SENDget1(map,KEY,PARAMETERS){
 				
 				   translate = items['location'].split(","); 
 				   jsonObj.push({
-        				'position' : new plugin.google.maps.LatLng(translate[0],translate[1]),
+        				'position' : GETcoord(translate[0],translate[1]),
+        				'rotation' : items['bearing'],
+        				'icon'     : CARicon()
+        				
     				   });
     				   
 			});
