@@ -45,38 +45,8 @@ function SENDget1(map,KEY,PARAMETERS){
             success     :       function(DATA){
 
 			
-			var result = JSON.stringify(DATA.result);
-			
-			var jsonObj = [];
-			
-			var translate = '';
-			
-			$.each(DATA.result, function(k,items){
-				
-				   translate = items['location'].split(","); 
-				   jsonObj.push({
-        				'position' : GETcoord(translate[0],translate[1]),
-        				'rotation' : items['bearing'],
-        				'icon'     : CARicon()
-        				
-    				   });
-    				   
-			});
-			
-			
-var data = [
-  {'position': new plugin.google.maps.LatLng(33.8798699,35.55197)},
-  {'position': new plugin.google.maps.LatLng(33.8347302,35.5693034)},
-  {'position': new plugin.google.maps.LatLng(33.858167,35.5124377)}
-];
+			FETCHmarker1(map,DATA.result);			
 
-
-			alert(JSON.stringify(jsonObj)); alert(JSON.stringify(data));
-			
-			
-				addMarkers(map,jsonObj, function(markers) {
-  					//markers[markers.length - 1].showInfoWindow();
-				});
 			  
             },
             error       :       function(jqXHR, textStatus, errorThrown) {
