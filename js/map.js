@@ -244,7 +244,8 @@ function GETcoord(lat,long,mode='0'){
     function transition(z,result,marker){
         i = 0;
         
-	var position = [localStorage.getItem('FROMmarker'+z)];
+	var position = localStorage.getItem('FROMmarker'+z).split(",");
+	result = result.split(",");
 	
 	
 	alert('result:'+result[0]); alert('position:'+position[0]);
