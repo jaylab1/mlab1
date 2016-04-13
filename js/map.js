@@ -324,7 +324,7 @@ function GETcoord(lat,long,mode='0'){
 			
 		addMarkers(map,jsonObj, function(markers) {
 					
-  				alert(markers);
+  				alert(JSON.stringify(markers));
   					
 		});
       }
