@@ -329,8 +329,6 @@ function GETcoord(lat,long,mode='0'){
 			
 		addMarkers(map,jsonObj, function(markers) {
 				
-				var result;
-				var from;
   				//markers[0].showInfoWindow();
   				setTimeout(function(){ 
   				
