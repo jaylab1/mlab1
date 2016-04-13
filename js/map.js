@@ -333,7 +333,7 @@ function GETcoord(lat,long,mode='0'){
   				//markers[0].showInfoWindow();
   				setTimeout(function(){ 
   				
-  					localStorage.setItem('FROMmarkers',FROM);
+  					//localStorage.setItem('FROMmarkers',FROM);
   					for (var i = 0; i < markers.length; i++) {
   						
   						alert(PREV[i]['to']);
