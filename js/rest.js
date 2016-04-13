@@ -52,12 +52,10 @@ function SENDget1(map,KEY,PARAMETERS){
 			$.each(DATA.result, function(k,items){
 				
 				   jsonObj.push({
-        				position: new plugin.google.maps.LatLng(items['location'])
+        				position: new plugin.google.maps.LatLng(items['location']),
     				   });
     				   
 			});
-			
-			alert(jsonObj);
 			
 				addMarkers(map,jsonObj, function(markers) {
   					//markers[markers.length - 1].showInfoWindow();
