@@ -247,7 +247,7 @@ function GETcoord(lat,long,mode='0'){
 	var taste = localStorage.getItem('FROMmarkers');
 	var position = taste[z].split(",");
 	
-	alert(JSON.stringify(taste));
+	alert(JSON.stringify(taste[z]));
         
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
