@@ -244,6 +244,8 @@ function GETcoord(lat,long,mode='0'){
     function transition(from,result,marker){
         i = 0;
         
+        alert(from);
+        
         var past     = from;
   	var res      = past.split(",");
   	var position = [res[0],res[1]];
