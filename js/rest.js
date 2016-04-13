@@ -49,10 +49,13 @@ function SENDget1(map,KEY,PARAMETERS){
 			
 			var jsonObj = [];
 			
+			var translate = '';
+			
 			$.each(DATA.result, function(k,items){
 				
+				   translate = items['location'].split(","); 
 				   jsonObj.push({
-        				'position' : new plugin.google.maps.LatLng(items['location']),
+        				'position' : new plugin.google.maps.LatLng(translate[0],translate[1]),
     				   });
     				   
 			});
