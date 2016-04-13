@@ -241,12 +241,11 @@ function GETcoord(lat,long,mode='0'){
     var i = 0;
     var deltaLat;
     var deltaLng;
-    function transition(pos,res,marker){
+    function transition(z,result,marker){
         i = 0;
-        var position = pos.split(",");
-        var result   = res.split(",");
         
-        alert(position[0]); alert(result[0]);
+	var taste = localStorage.getItem('FROMmarkers');
+	var position = taste[z].split(",");
         
         deltaLat = (result[0] - position[0])/numDeltas;
         deltaLng = (result[1] - position[1])/numDeltas;
@@ -332,9 +331,11 @@ function GETcoord(lat,long,mode='0'){
   				//markers[0].showInfoWindow();
   				setTimeout(function(){ 
   				
+  					localStorage.setItem('FROMmarkers',FROM);
   					for (var i = 0; i < markers.length; i++) {
   					
-    	    					transition([FROM[i],TO[i],markers[i]); 
+    	    					var result = [TO[i]];
+    	    					transition(z,result,markers[i]); 
     	    					
   					}
   					
