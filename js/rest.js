@@ -48,10 +48,11 @@ function SENDget1(map,KEY,PARAMETERS){
 			var result = JSON.stringify(DATA.result);
 			
 			var jsonObj = [];
-			var item    = [];
+			
 			
 			$.each(DATA.result, function(k,items){
 				
+					var item    = [];
 					item["position"] =   GETcoord(items['location']);
  					item["bearing"]  =   items['bearing'];
  					item["icon"]	 =   CARicon();
