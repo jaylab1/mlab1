@@ -44,10 +44,9 @@ function SENDget1(map,KEY,PARAMETERS){
             data        :       KEY+'=true&'+PARAMETERS,
             success     :       function(DATA){
 
-			
-			FETCHmarker1(map,DATA.result);			
+			results = DATA.result;
+			FETCHmarker1(map,results);			
 
-			  
             },
             error       :       function(jqXHR, textStatus, errorThrown) {
                 
