@@ -325,7 +325,14 @@ function GETcoord(lat,long,mode='0'){
 			
 		addMarkers(map,jsonObj, function(markers) {
 					
-  				markers[0].showInfoWindow();
+  				//markers[0].showInfoWindow();
+  				for (var i = 0; i < markers.length; i++) {
+  					
+  					//translate = items['location'].split(","); 
+					var result = [33.8836142,35.5303557];
+    	    				setTimeout(function(){ transition(result,markers[i]); }, 7000); 	
+  					
+  				}
   					
 		});
       }
