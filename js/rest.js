@@ -49,18 +49,16 @@ function SENDget1(map,KEY,PARAMETERS){
 			
 			var jsonObj = [];
 			
-			
 			$.each(DATA.result, function(k,items){
 				
-					var item    = [];
-					item["position"] =   GETcoord(items['location']);
- 					item["bearing"]  =   items['bearing'];
- 					item["icon"]	 =   CARicon();
-					jsonObj.push(item);
-				
-				
+				   jsonObj.push({
+        				position: GETcoord(items['location']),
+        				bearing: items['bearing'],
+        				icon: CARicon()
+    				   });
+    				   
 			});
-			
+
 				addMarkers(map,jsonObj, function(markers) {
   					//markers[markers.length - 1].showInfoWindow();
 				});
