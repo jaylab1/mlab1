@@ -23,7 +23,7 @@ document.addEventListener("deviceready", function() {
     
     
     
-    var location = setPosition('33.8886459,35.4867246');
+    var location = setPosition(33.8886459,35.4867246);
         
     var div = document.getElementById("map_canvas");    
     
@@ -54,8 +54,15 @@ document.addEventListener("deviceready", function() {
     
     
     
-    
-    
+//GET COORDINATION   
+function GETcoord(lat,long,mode='0'){
+	
+	if (mode==0)
+	  return new plugin.google.maps.LatLng(lat,long);
+       else
+          return [lat,long];
+	
+}    
     
     
 });
