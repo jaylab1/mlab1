@@ -4,7 +4,6 @@
       // Initialize the map view
       map = plugin.google.maps.Map.getMap(div,{
 	   
-  		'backgroundColor': 'white',
   		'controls': {
     			'myLocationButton': true,
     			'compass': false,
@@ -21,7 +20,7 @@
                 	'bearing': 140,
                 
             	},
-            	'center': location,
+            	'center': new plugin.google.maps.LatLng(33.8886459,35.4867246),
 	  });    
       // Wait until the map is ready status.
       map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
