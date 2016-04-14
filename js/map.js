@@ -23,7 +23,7 @@ document.addEventListener("deviceready", function() {
     
     
     
-    var location = setPosition(33.8886459,35.4867246);
+    var location =  GETcoord(33.8886459,35.4867246);
         
     var div = document.getElementById("map_canvas");    
     
