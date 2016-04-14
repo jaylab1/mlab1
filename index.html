@@ -13,8 +13,26 @@
     <link rel="stylesheet" href="css/my-app.css">
 	<link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="js/map.js"></script>
     <script src="cordova.js"></script>
+    
+        <script type="text/javascript">
+    var map;
+    document.addEventListener("deviceready", function() {
+      var div = document.getElementById("map_canvas");
+      // Initialize the map view
+      map = plugin.google.maps.Map.getMap(div);
+      // Wait until the map is ready status.
+      map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
+    }, false);
+    function onMapReady() {
+      var button = document.getElementById("button");
+      button.addEventListener("click", onBtnClicked, false);
+    }
+    function onBtnClicked() {
+      map.showDialog();
+    }
+    </script>
+    
   </head>
   <body>
              
