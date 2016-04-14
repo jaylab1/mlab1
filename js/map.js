@@ -2,7 +2,27 @@
     document.addEventListener("deviceready", function() {
       var div = document.getElementById("map_canvas");
       // Initialize the map view
-      map = plugin.google.maps.Map.getMap(div);
+      map = plugin.google.maps.Map.getMap(div,{
+	   
+  		'backgroundColor': 'white',
+  		'controls': {
+    			'myLocationButton': true,
+    			'compass': false,
+  		},
+		'gestures': {
+    			'scroll': true,
+    			'tilt': true,
+    			'rotate': true,
+    			'zoom': true
+  		},
+            	'camera': {
+                	'latLng': location,
+                	'zoom': 10,
+                	'bearing': 140,
+                
+            	},
+            	'center': location,
+	  });    
       // Wait until the map is ready status.
       map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
     }, false);
