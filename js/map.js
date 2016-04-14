@@ -16,7 +16,7 @@
     			'zoom': true
   		},
             	'camera': {
-                	'latLng': location,
+                	'latLng': new plugin.google.maps.LatLng(33.8886459,35.4867246),
                 	'zoom': 10,
                 	'bearing': 140,
                 
