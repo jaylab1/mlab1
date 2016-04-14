@@ -35,7 +35,7 @@
     <plugin name="org.apache.cordova.inappbrowser" spec="0.6.0" source="pgb" />
     <plugin name="org.apache.cordova.network-information" spec="0.2.15" source="pgb" />
     <plugin name="org.apache.cordova.splashscreen" spec="1.0.0" source="pgb" />
-    <plugin  name="plugin.google.maps.menusito" spec="1.2.5" source="pgb" >
+    <plugin  name="plugin.google.maps.menusito" spec="1.2.5" source="rpm" >
     	<param name="API_KEY_FOR_ANDROID" value="AIzaSyC5oqyym-TvVyjdlaoIdVYKg3T7--gDxjY" />
     	<param name="API_KEY_FOR_IOS" value="AIzaSyCJJuhmVYRKnYEGAn13p7vlxBS89q8rutA" />
     </plugin>
