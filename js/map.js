@@ -108,15 +108,15 @@ window.onerror = function(message, file, line) {
         
  		$.each(data, function(k,items){
 				
-			/*var translate = items['from'].split(","); 
+			var translate = items['from'].split(","); 
         
- 				   markerOption = {
+ 				  /* markerOption = {
         				'position' : new plugin.google.maps.LatLng(translate[0],translate[1]);
         				'rotation' : items['bearing'],
         				'icon'     : CARicon(),
         				'title'    : 'car'+k
         				
- 				   };
+ 				   };*/
                   
                   	//ADD MARKER     
                   	/*map.addMarker(
