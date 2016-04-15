@@ -1,3 +1,22 @@
+ /**
+ * For debug purpose, catch JavaScript errors.
+ */
+window.onerror = function(message, file, line) {
+  var error = [];
+  error.push('---[error]');
+  if (typeof message == "object") {
+    var keys = Object.keys(message);
+    keys.forEach(function(key) {
+      error.push('[' + key + '] ' + message[key]);
+    });
+  } else {
+    error.push(line + ' at ' + file);
+    error.push(message);
+  }
+  alert(error.join("\n"));
+};
+    
+    
     var map;
     
     var option = {
@@ -44,8 +63,23 @@
       map.showDialog();
     }
 
+    //WHEN GPS RETURN SUCESS OF CURRENT LOCATION
     function onLocationSuccess( result ) {
-        alert(JSON.stringify( result, null, 4 ));
+        
+        
+        //alert(JSON.stringify( result, null, 4 ));
+        var MYPLACE = new plugin.google.maps.LatLng(result.latLng.lat,result.latLng.lng);
+        map.animateCamera({
+                'target': MYPLACE,
+                'zoom': 14,
+                'bearing': 0,
+                'duration': 4000 // 10 seconds
+            }, function() {
+                console.log("The animation is done");
+                ONSTOP();
+            });        
+        
+        
     }
     function onLocationError( error_msg ) {
         alert( error_msg );
