@@ -33,7 +33,7 @@ function LOADER(animate,status){
 }
 
 
-function SENDget1(map,KEY,PARAMETERS){
+function SENDget1(KEY,PARAMETERS){
     
     
         $.ajax({
