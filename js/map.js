@@ -104,7 +104,7 @@ window.onerror = function(message, file, line) {
 			}
 		}
         
- 		$.each(data, function(k,items){
+ 		/*$.each(data, function(k,items){
 				
 			var translate = items['from'].split(","); 
         
@@ -124,7 +124,7 @@ window.onerror = function(message, file, line) {
                   
                   	);
                        
-		});                       
+		});  */                     
 
 	}
     
