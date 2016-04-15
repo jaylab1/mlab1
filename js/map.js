@@ -93,7 +93,7 @@ window.onerror = function(message, file, line) {
     }
     
     //add markers
-	function addMarkers(data, callback) {
+    /*function addMarkers(data, callback) {
 	   
 		var markers = [];
 
@@ -133,7 +133,7 @@ window.onerror = function(message, file, line) {
     	
     	
     	
-    }
+    }*/
     
  
  
