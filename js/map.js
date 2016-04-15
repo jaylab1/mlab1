@@ -110,7 +110,7 @@ window.onerror = function(message, file, line) {
 				
 			var translate = items['from'].split(","); 
                   	map.addMarker({
-        				'position' : new plugin.google.maps.LatLng(translate[0],translate[1]);
+        				'position' : new plugin.google.maps.LatLng(translate[0],translate[1]),
         				'rotation' : items['bearing'],
         				'icon'     : CARicon(),
         				'title'    : 'car'+k
