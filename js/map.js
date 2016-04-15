@@ -1,4 +1,9 @@
     var map;
+    
+    var option = {
+        enableHighAccuracy: true      // Force GPS
+    };
+    
     document.addEventListener("deviceready", function() {
       var div = document.getElementById("map_canvas");
       // Initialize the map view
@@ -24,11 +29,24 @@
 	  });    
       // Wait until the map is ready status.
       map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
+      
+      
+      
     }, false);
     function onMapReady() {
-      var button = document.getElementById("button");
-      button.addEventListener("click", onBtnClicked, false);
+      
+      
+      map.getMyLocation(option, onLocationSuccess, onLocationError);
+      
+      
     }
     function onBtnClicked() {
       map.showDialog();
+    }
+
+    function onLocationSuccess( result ) {
+        alert(JSON.stringify( result, null, 4 ));
+    }
+    function onLocationError( error_msg ) {
+        alert( error_msg );
     }
