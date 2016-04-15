@@ -58,11 +58,11 @@ window.onerror = function(message, file, line) {
       
       map.getMyLocation(option, onLocationSuccess, onLocationError);
       
-      		SENDget1(
+      		/*SENDget1(
 			'getCARS',
 			'',
 			testing
-		);
+		);*/
       
       
     }
