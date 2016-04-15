@@ -62,6 +62,11 @@ window.onerror = function(message, file, line) {
       
       map.getMyLocation(option, onLocationSuccess, onLocationError);
       
+      		SENDget1(
+			'getCARS',
+			''
+		);
+      
       
     }
     function onBtnClicked() {
