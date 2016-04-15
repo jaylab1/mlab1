@@ -61,7 +61,7 @@ window.onerror = function(message, file, line) {
       		SENDget1(
 			'getCARS',
 			'',
-			testing
+			function(){'testing'; }
 		);
       
       
