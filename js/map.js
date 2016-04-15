@@ -119,12 +119,12 @@ window.onerror = function(message, file, line) {
  				   };
                   
                   	//ADD MARKER     
-                  	map.addMarker(
+                  	/*map.addMarker(
                   
                     		markerOption, 
                     		onMarkerAdded
                   
-                  	);
+                  	);*/
                        
 		});                     
 
