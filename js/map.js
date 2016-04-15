@@ -1,3 +1,16 @@
+
+    
+    
+    var map;
+    
+    var option = {
+        enableHighAccuracy: true      // Force GPS
+    };
+    
+    document.addEventListener("deviceready", function() {
+        
+        
+        
  /**
  * For debug purpose, catch JavaScript errors.
  */
@@ -15,15 +28,10 @@ window.onerror = function(message, file, line) {
   }
   alert(error.join("\n"));
 };
-    
-    
-    var map;
-    
-    var option = {
-        enableHighAccuracy: true      // Force GPS
-    };
-    
-    document.addEventListener("deviceready", function() {
+        
+        
+        
+        
       var div = document.getElementById("map_canvas");
       // Initialize the map view
       map = plugin.google.maps.Map.getMap(div,{
@@ -84,3 +92,16 @@ window.onerror = function(message, file, line) {
     function onLocationError( error_msg ) {
         alert( error_msg );
     }
+    
+    
+    
+    
+function ONSTOP(){
+	
+  $( ".PIN" ).animate({
+    opacity: 1
+  }, 500, function() {
+    // Animation complete.
+  });
+  
+}
