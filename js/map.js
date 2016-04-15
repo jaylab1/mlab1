@@ -93,12 +93,12 @@ window.onerror = function(message, file, line) {
     }
     
     //add markers
-    /*function addMarkers(data, callback) {
+    function addMarkers(data,callback) {
 	   
 		var markers = [];
 
 		function onMarkerAdded(marker) {
-				markers.push(marker);
+			markers.push(marker);
 			if (markers.length === data.length) {
 				callback(markers);
 			}
@@ -106,7 +106,7 @@ window.onerror = function(message, file, line) {
         
  		$.each(data, function(k,items){
 				
-			translate = items['from'].split(","); 
+			var translate = items['from'].split(","); 
         
  				   markerOption = {
         				'position' : new plugin.google.maps.LatLng(translate[0],translate[1]);
@@ -116,24 +116,18 @@ window.onerror = function(message, file, line) {
         				
  				   };
                   
-                  //ADD MARKER     
-                  map.addMarker(
+                  	//ADD MARKER     
+                  	map.addMarker(
                   
-                    markerOption, 
+                    		markerOption, 
+                    		onMarkerAdded
                   
-                    onMarkerAdded
-                  
-                  );
+                  	);
                        
 		});                       
 
 	}
     
-    function testing(){
-    	
-    	
-    	
-    }*/
     
  
  
