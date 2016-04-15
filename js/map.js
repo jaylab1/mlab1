@@ -96,6 +96,8 @@ window.onerror = function(message, file, line) {
     function addMarkers(data,callback) {
 	   
 		var markers = [];
+		
+		var markerOption;
 
 		function onMarkerAdded(marker) {
 			markers.push(marker);
@@ -104,7 +106,7 @@ window.onerror = function(message, file, line) {
 			}
 		}
         
- 		/*$.each(data, function(k,items){
+ 		$.each(data, function(k,items){
 				
 			var translate = items['from'].split(","); 
         
@@ -124,7 +126,7 @@ window.onerror = function(message, file, line) {
                   
                   	);
                        
-		});  */                     
+		});                     
 
 	}
     
