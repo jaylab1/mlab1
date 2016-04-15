@@ -45,7 +45,7 @@ function SENDget1(map,KEY,PARAMETERS){
             success     :       function(DATA){
 
 			results = DATA.result;
-			FETCHmarker1(map,results);			
+			addMarkers(results, callback)			
 
             },
             error       :       function(jqXHR, textStatus, errorThrown) {
