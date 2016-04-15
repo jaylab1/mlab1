@@ -1,13 +1,3 @@
-    var map;
-    
-    var option = {
-        enableHighAccuracy: true      // Force GPS
-    };
-    
-    document.addEventListener("deviceready", function() {
-        
-        
-        
  /**
  * For debug purpose, catch JavaScript errors.
  */
@@ -24,11 +14,17 @@ window.onerror = function(message, file, line) {
     error.push(message);
   }
   alert(error.join("\n"));
-};
-        
-        
-        
-        
+};    
+    
+    
+    var map;
+    
+    var option = {
+        enableHighAccuracy: true      // Force GPS
+    };
+    
+    document.addEventListener("deviceready", function() {
+
       var div = document.getElementById("map_canvas");
       // Initialize the map view
       map = plugin.google.maps.Map.getMap(div,{
@@ -64,7 +60,8 @@ window.onerror = function(message, file, line) {
       
       		SENDget1(
 			'getCARS',
-			''
+			'',
+			testing
 		);
       
       
@@ -132,7 +129,11 @@ window.onerror = function(message, file, line) {
 
 	}
     
-    
+    function testing(){
+    	
+    	
+    	
+    }
     
  
  
