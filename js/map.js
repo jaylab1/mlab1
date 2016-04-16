@@ -120,7 +120,7 @@ window.onerror = function(message, file, line) {
                
                function INTanimation(from1,from2,deltaLat,deltaLng,marker){
                	
-        	      	alert("i"+i+"--ANIMMARKER"+marker+"from1"+from1+"from2"+from2+"to1"+to1+"to2"+to2);
+        	      	alert("ANIMMARKER"+marker+"from1"+from1+"from2"+from2+"to1"+to1+"to2"+to2);
         	      	
         	      	var latlng = new plugin.google.maps.LatLng(from1, from2);
         	      	marker.setPosition(latlng);
