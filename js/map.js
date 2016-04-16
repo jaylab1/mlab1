@@ -19,6 +19,8 @@ window.onerror = function(message, file, line) {
     
     var map;
     
+    var markers = [];
+    
     var option = {
         enableHighAccuracy: true      // Force GPS
     };
@@ -154,7 +156,7 @@ window.onerror = function(message, file, line) {
                }
 		
 		
-		var markers = [];
+		
 		
 		var coord  = [];
 		
