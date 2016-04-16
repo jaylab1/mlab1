@@ -104,6 +104,8 @@ window.onerror = function(message, file, line) {
     	       var deltaLat;
                var deltaLng;
                
+               alert(JSON.stringify(markers));
+               
                function EXECanimation(from1,from2,to1,to2,marker){
                	
                	      i = 0;
@@ -123,7 +125,7 @@ window.onerror = function(message, file, line) {
                
                function INTanimation(from1,from2,deltaLat,deltaLng,marker){
                	
-        	      	//alert("ANIMMARKER"+marker+"from1"+from1+"from2"+from2);
+        	      	
         	      	
         	      	var latlng = new plugin.google.maps.LatLng(from1,from2);
         	      	marker.setPosition(latlng);
@@ -194,6 +196,8 @@ window.onerror = function(message, file, line) {
 				
 			var translate = items['from'].split(","); 
 			var to        = items['to'].split(","); 
+			
+			alert("each");
 			
 		if (play == 1){
                   	map.addMarker({
