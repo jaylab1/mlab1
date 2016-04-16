@@ -105,7 +105,7 @@ window.onerror = function(message, file, line) {
                	
                	      i = 0;
                	      
-               	     alert("MARKER"+marker+"from1"+from1+"from2"+from2+"to1"+to1+"to2"+to2);
+               	     //alert("MARKER"+marker+"from1"+from1+"from2"+from2+"to1"+to1+"to2"+to2);
                	      
                	      deltaLat = (to1 - from1)/numDeltas;
         	      deltaLng = (to2 - from2)/numDeltas;
@@ -120,7 +120,7 @@ window.onerror = function(message, file, line) {
                
                function INTanimation(from1,from2,deltaLat,deltaLng,marker){
                	
-        	      	alert("ANIMMARKER"+marker+"from1"+from1+"from2"+from2);
+        	      	//alert("ANIMMARKER"+marker+"from1"+from1+"from2"+from2);
         	      	
         	      	var latlng = new plugin.google.maps.LatLng(from1,from2);
         	      	marker.setPosition(latlng);
