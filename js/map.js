@@ -184,7 +184,10 @@ window.onerror = function(message, file, line) {
 				
 			var translate = items['from'].split(","); 
 			var to        = items['to'].split(","); 
-                  	map.addMarker({
+			
+			if (marker[k].isVisible() === false){
+			
+                  		map.addMarker({
         				'position' : new plugin.google.maps.LatLng(translate[0],translate[1]),
         				'rotation' : items['bearing'],
         				'icon'     : CARicon(),
@@ -195,7 +198,9 @@ window.onerror = function(message, file, line) {
 						onMarkerAdded(marker,translate[0],translate[1],to[0],to[1]);
     				     });
                        
-		});                     
+				}); 
+				
+ 			}
 
 	}
     
