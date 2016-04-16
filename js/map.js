@@ -201,6 +201,8 @@ window.onerror = function(message, file, line) {
 				}); 
 				
  			}
+ 			
+    		}
 
 	}
     
