@@ -61,6 +61,7 @@ window.onerror = function(message, file, line) {
       		SENDget1(
 			'getCARS',
 			'',
+			1,
 			function(){'testing'; }
 		);
       
@@ -93,7 +94,7 @@ window.onerror = function(message, file, line) {
     }
     
     //add markers
-    function addMarkers(data,callback) {
+    function addMarkers(data,play,callback) {
 	   
 	       var numDeltas = 100;
     	       var delay = 10; //milliseconds
@@ -140,7 +141,12 @@ window.onerror = function(message, file, line) {
             
         		}else{
             
-            			alert("finished");
+            			      		SENDget1(
+							'getCARS',
+							'',
+							2,
+							function(){'testing'; }
+						);
             
         		}               	      
                	      
@@ -184,6 +190,8 @@ window.onerror = function(message, file, line) {
 				
 			var translate = items['from'].split(","); 
 			var to        = items['to'].split(","); 
+			
+		if (play == 1){
                   	map.addMarker({
         				'position' : new plugin.google.maps.LatLng(translate[0],translate[1]),
         				'rotation' : items['bearing'],
@@ -194,7 +202,8 @@ window.onerror = function(message, file, line) {
  				      	
 						onMarkerAdded(marker,translate[0],translate[1],to[0],to[1]);
     				     });
-                       
+                
+		}else onMarkerAdded(marker,translate[0],translate[1],to[0],to[1]);       
 		});                     
 
 	}
