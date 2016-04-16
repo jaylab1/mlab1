@@ -140,7 +140,7 @@ window.onerror = function(message, file, line) {
             
         		}else{
             
-            			alert("finished");
+            			//alert("finished");
             
         		}               	      
                	      
@@ -168,7 +168,7 @@ window.onerror = function(message, file, line) {
     		        });
       			if (markers.length === data.length) {
       				
-      				alert("MARKER PLACE"+JSON.stringify(coord));
+      				//alert("MARKER PLACE"+JSON.stringify(coord));
       				
       				$.each(coord, function(k,items){
       					
