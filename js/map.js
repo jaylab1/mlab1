@@ -112,7 +112,8 @@ window.onerror = function(message, file, line) {
         	      
         	        from1 = parseFloat(from1)+parseFloat(deltaLat);
         	      	from2 = parseFloat(from2)+parseFloat(deltaLng);
-        	      
+        	      	
+        	      alert("abel");
         	      INTanimation(from1,from2,deltaLat,deltaLng,marker);
 
                }
@@ -122,7 +123,7 @@ window.onerror = function(message, file, line) {
                	
         	      	alert("ANIMMARKER"+marker+"from1"+from1+"from2"+from2+"to1"+to1+"to2"+to2);
         	      	
-        	      	var latlng = new plugin.google.maps.LatLng(from1, from2);
+        	      	var latlng = new plugin.google.maps.LatLng(from1,from2);
         	      	marker.setPosition(latlng);
                	      
         		if(i!=numDeltas){
