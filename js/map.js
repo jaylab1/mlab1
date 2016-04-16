@@ -152,7 +152,7 @@ window.onerror = function(message, file, line) {
 							function(){'testing'; }
 						);
 						
-						alert("finished");
+						//alert("finished");
             
         		}               	      
                	      
