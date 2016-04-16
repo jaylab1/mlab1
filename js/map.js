@@ -149,6 +149,8 @@ window.onerror = function(message, file, line) {
 							2,
 							function(){'testing'; }
 						);
+						
+						alert("finished");
             
         		}               	      
                	      
