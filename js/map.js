@@ -135,7 +135,7 @@ window.onerror = function(message, file, line) {
         	      			INTanimation(from1,from2,deltaLat,deltaLng,marker);
         	      			
     					
-	    			},delay)
+	    			},delay);
             
             
         		}else{
@@ -169,12 +169,13 @@ window.onerror = function(message, file, line) {
       			if (markers.length === data.length) {
       				
       				//alert("MARKER PLACE"+JSON.stringify(coord));
-      				
+      			setTimeout(function() {	
       				$.each(coord, function(k,items){
       					
       					EXECanimation(items['from1'],items['from2'],items['to1'],items['to2'],markers[k]);
       							
-      				});			
+      				});
+      			},3000);
       			}				
 
 		}
