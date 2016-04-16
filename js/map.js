@@ -166,7 +166,7 @@ window.onerror = function(message, file, line) {
       				
       				$.each(coord, function(k,items){
       					
-      					EXECanimation(items['from1'],items['from2'],items['to1'],items['to2'],marker[k]);
+      					EXECanimation(items['from1'],items['from2'],items['to1'],items['to2'],markers[k]);
       							
       				});			
       			}				
@@ -183,7 +183,7 @@ window.onerror = function(message, file, line) {
         				'icon'     : CARicon(),
         				'title'    : 'car'+k
         				
- 				      } function(marker) {
+ 				      }, function(marker) {
  				      	
 						onMarkerAdded(marker,translate[0],translate[1],to[0],to[1]);
     				     });
