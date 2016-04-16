@@ -113,7 +113,7 @@ window.onerror = function(message, file, line) {
         	        from1 = parseFloat(from1)+parseFloat(deltaLat);
         	      	from2 = parseFloat(from2)+parseFloat(deltaLng);
         	      
-        	      INTanimation(from1,from2,deltaLat,deltaLng);
+        	      INTanimation(from1,from2,deltaLat,deltaLng,marker);
 
                }
                
@@ -132,7 +132,7 @@ window.onerror = function(message, file, line) {
             				
     					from1 = parseFloat(from1)+parseFloat(deltaLat);
         	      			from2 = parseFloat(from2)+parseFloat(deltaLng);
-        	      			INTanimation(from1,from2,deltaLat,deltaLng);
+        	      			INTanimation(from1,from2,deltaLat,deltaLng,marker);
         	      			
     					
 	    			},delay)
