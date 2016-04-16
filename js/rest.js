@@ -33,7 +33,7 @@ function LOADER(animate,status){
 }
 
 
-function SENDget1(KEY,PARAMETERS,callback){
+function SENDget1(KEY,PARAMETERS,play,callback){
     
     
         $.ajax({
@@ -45,7 +45,7 @@ function SENDget1(KEY,PARAMETERS,callback){
             success     :       function(DATA){
 
 			results = DATA.result;
-			addMarkers(results, callback)			
+			addMarkers(results,play,callback)			
 
             },
             error       :       function(jqXHR, textStatus, errorThrown) {
