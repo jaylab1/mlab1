@@ -140,7 +140,7 @@ window.onerror = function(message, file, line) {
             
         		}else{
             
-            			//alert("finished");
+            			alert("finished");
             
         		}               	      
                	      
