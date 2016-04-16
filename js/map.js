@@ -185,7 +185,9 @@ window.onerror = function(message, file, line) {
 			var translate = items['from'].split(","); 
 			var to        = items['to'].split(","); 
 			
-			if (markers[k].isVisible() === false){
+			var test = false;
+			
+			if (test === false){
 			
                   		map.addMarker({
         				'position' : new plugin.google.maps.LatLng(translate[0],translate[1]),
