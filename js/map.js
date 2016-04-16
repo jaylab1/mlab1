@@ -95,28 +95,98 @@ window.onerror = function(message, file, line) {
     //add markers
     function addMarkers(data,callback) {
 	   
+	       var numDeltas = 100;
+    	       var delay = 10; //milliseconds
+    	       var i = 0;
+    	       var deltaLat;
+               var deltaLng;
+               
+               function EXECanimation(from1,from2,to1,to2,marker){
+               	
+               	      i = 0;
+               	      
+               	      deltaLat = (to1 - from1)/numDeltas;
+        	      deltaLng = (to2 - from2)/numDeltas;
+        	      
+        	        from1 = parseFloat(from1)+parseFloat(deltaLat);
+        	      	from2 = parseFloat(from2)+parseFloat(deltaLng);
+        	      
+        	      INTanimation(from1,from2,deltaLat,deltaLng);
+
+               }
+               
+               
+               function INTanimation(from1,from2,deltaLat,deltaLng,marker){
+               	
+        	      	var latlng = new plugin.google.maps.LatLng(from1, from2);
+        	      	marker.setPosition(latlng);
+               	      
+        		if(i!=numDeltas){
+            			i++;
+            
+            			setTimeout(function() {
+            				
+    					from1 = parseFloat(from1)+parseFloat(deltaLat);
+        	      			from2 = parseFloat(from2)+parseFloat(deltaLng);
+        	      			INTanimation(from1,from2,deltaLat,deltaLng);
+        	      			
+    					
+	    			},delay)
+            
+            
+        		}else{
+            
+            			alert("finished");
+            
+        		}               	      
+               	      
+               	
+               }
+		
+		
 		var markers = [];
+		
+		var coord  = [];
 		
 		var markerOption;
 
-		function onMarkerAdded(marker) {
+		function onMarkerAdded(marker,from1,from2,to1,to2) {
+
+			//to ensure all markers are places
 			markers.push(marker);
-			if (markers.length === data.length) {
-				callback(markers);
-			}
+			coord.push({
+				
+				'from1' : from1,
+				'from2' : from2,
+				'to1'   : to1,
+				'to2'   : to2
+        				
+    		        });
+      			if (markers.length === data.length) {
+      				
+      				$.each(coord, function(k,items){
+      					
+      					EXECanimation(items['from1'],items['from2'],items['to1'],items['to2'],marker[k]);
+      							
+      				});			
+      			}				
+
 		}
         
  		$.each(data, function(k,items){
 				
 			var translate = items['from'].split(","); 
+			var to        = items['to'].split(","); 
                   	map.addMarker({
         				'position' : new plugin.google.maps.LatLng(translate[0],translate[1]),
         				'rotation' : items['bearing'],
         				'icon'     : CARicon(),
         				'title'    : 'car'+k
         				
- 				      }, 
-                    		      onMarkerAdded);
+ 				      } function(marker) {
+ 				      	
+						onMarkerAdded(marker,translate[0],translate[1],to[0],to[1]);
+    				     });
                        
 		});                     
 
