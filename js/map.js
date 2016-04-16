@@ -187,7 +187,7 @@ window.onerror = function(message, file, line) {
       					EXECanimation(items['from1'],items['from2'],items['to1'],items['to2'],markers[k]);
       							
       				});
-      			},3000);
+      			},15000);
       			}				
 
 		}
