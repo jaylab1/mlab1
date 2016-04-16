@@ -169,7 +169,7 @@ window.onerror = function(message, file, line) {
 		function onMarkerAdded(marker,from1,from2,to1,to2) {
 
 			//to ensure all markers are places
-			markers.push(marker);
+			if (play == 1) markers.push(marker);
 			coord.push({
 				
 				'from1' : from1,
