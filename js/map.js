@@ -144,7 +144,7 @@ window.onerror = function(message, file, line) {
             			      		SENDget1(
 							'getCARS',
 							'',
-							1,
+							2,
 							function(){'testing'; }
 						);
             
@@ -203,7 +203,7 @@ window.onerror = function(message, file, line) {
 						onMarkerAdded(marker,translate[0],translate[1],to[0],to[1]);
     				     });
                 
-		}else onMarkerAdded(marker,translate[0],translate[1],to[0],to[1]);       
+		}else onMarkerAdded(markers[k],translate[0],translate[1],to[0],to[1]);       
 		});                     
 
 	}
