@@ -104,7 +104,7 @@ window.onerror = function(message, file, line) {
     	       var deltaLat;
                var deltaLng;
                
-               alert(JSON.stringify(markers));
+               //alert(JSON.stringify(markers));
                
                function EXECanimation(from1,from2,to1,to2,marker){
                	
@@ -197,7 +197,7 @@ window.onerror = function(message, file, line) {
 			var translate = items['from'].split(","); 
 			var to        = items['to'].split(","); 
 			
-			alert("each");
+			//alert("each");
 			
 		if (play == 1){
                   	map.addMarker({
